@@ -14,6 +14,6 @@
 
 // functions
 
-- (BOOL)openExtenalApplicationWithCommand:(NSString *)cmd; // 打开外部app
+- (BOOL)openExtenalApplicationWithAppName:(NSString *)appName, ... NS_REQUIRES_NIL_TERMINATION; // 打开外部app, appName 可以是一个完整的命令
 
 @end

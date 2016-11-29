@@ -6,6 +6,8 @@
 //  Copyright © 2016 fallen.ink. All rights reserved.
 //
 
+#import "suite-mac-macros.h"
+
 // foundation
 #import "_singleton.h"
 

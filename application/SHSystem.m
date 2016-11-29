@@ -6,6 +6,8 @@
 //  Copyright © 2016 fallen.ink. All rights reserved.
 //
 
+#import <Cocoa/Cocoa.h>
+
 #import "SHSystem.h"
 
 @implementation SHSystem
@@ -14,21 +16,41 @@
 
 #pragma mark - functions
 
-- (BOOL)openExtenalApplicationWithCommand:(NSString *)cmd {
+- (BOOL)openExtenalApplicationWithAppName:(NSString *)appName, ... {
+    NSMutableArray *arguments = [NSMutableArray new];
     
-    //直接运行
-//    if(![[NSWorkspace sharedWorkspace] launchApplication:@"Path Finder"])
-//        NSLog(@"运行失败");
-//    ////////////////////////////////////////////////////////////
-//    //带参数运行
-//    NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
-//    NSURL *url = [NSURL fileURLWithPath:[workspace fullPathForApplication:@"Path Finder"]];
-//    //Handle url==nil
-//    NSError *error = nil;
-//    NSArray *arguments = [NSArray arrayWithObjects:@"Argument1", @"Argument2", nil];
-//    [workspace launchApplicationAtURL:url options:0 configuration:[NSDictionary dictionaryWithObject:arguments forKey:NSWorkspaceLaunchConfigurationArguments] error:error];
+    va_list args;
+    va_start(args, appName);
     
-    return YES;
+    if (is_string_empty(appName)) {
+        return NO;
+    }
+    
+    NSString *str;
+        
+    while (YES) {//在循环中遍历
+        str = va_arg(args, NSString *);
+        if (!str) {//当最后一个参数为nil的时候跳出循环
+            break;
+        } else {
+            [arguments addObject:str];
+        }
+    }
+    
+    va_end(args);
+    
+    NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
+    
+    if (!arguments.count) {
+        // 无参数
+        return [workspace launchApplication:appName];
+    } else {
+        NSURL *url = [NSURL fileURLWithPath:[workspace fullPathForApplication:appName]];
+        return [workspace launchApplicationAtURL:url
+                                         options:0
+                                   configuration:[NSDictionary dictionaryWithObject:arguments forKey:NSWorkspaceLaunchConfigurationArguments]
+                                           error:nil] != nil;
+    }
 }
 
 @end
