@@ -53,4 +53,8 @@
     }
 }
 
+- (BOOL)openFile:(NSString *)filepath {
+    return [[NSWorkspace sharedWorkspace] openFile:filepath];
+}
+
 @end
