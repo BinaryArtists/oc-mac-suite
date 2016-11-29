@@ -9,7 +9,9 @@
 #import "suite-mac-macros.h"
 
 // foundation
+#import "_runtime.h"
 #import "_singleton.h"
+#import "_notification.h"
 
 // mvc
 
