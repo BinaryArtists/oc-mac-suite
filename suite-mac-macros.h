@@ -19,6 +19,20 @@ static inline BOOL is_empty(id thing) {
 
 #define is_string_empty( _str_ )    is_empty( _str_ )
 
+// inspired by https://github.com/ObornJung/OBFoundationLib/blob/master/OBFoundationLib/Macro/OBEncodeMacro.h
+#define stringify(string)                @#string
+
+/**
+ *  字符串拼接
+ *
+ *  @param _str_
+ *  @param _cat_
+ *
+ *  @return 拼接结果
+ */
+#define string_concat( _str_, _cat_ )    (_str_ _cat_)
+#define string_concat_3( _str1_, _str2_, _str3_ ) (_str1_ _str2_ _str3_)
+
 // Debug
 
 #ifdef DEBUG
