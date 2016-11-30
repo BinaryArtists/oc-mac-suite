@@ -11,6 +11,8 @@
 #import "suite-mac-macros.h"
 
 // foundation
+#import "NSObject+Extension.h"
+
 #import "_runtime.h"
 #import "_singleton.h"
 #import "_notification.h"
@@ -22,8 +24,10 @@
 #import "NSView+Extension.h"
 #import "NSViewController+Extension.h"
 #import "NSColor+Extension.h"
+#import "NSObject+MVC.h"
 
 #import "BaseWebVC.h"
+#import "BaseWindowController.h"
 
 // application
 #import "SHSystem.h"

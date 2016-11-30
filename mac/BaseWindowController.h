@@ -1,5 +1,5 @@
 //
-//  NSWindowController+Extension.h
+//  BaseWindowController.h
 //  exam
 //
 //  Created by fallen.ink on 30/11/2016.
@@ -8,10 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface NSWindowController (Extension)
-
-- (id) _initWithNib;
-
-- (void)resizeWithNewFrame:(CGRect)newFrame;
+@interface BaseWindowController : NSWindowController
 
 @end
