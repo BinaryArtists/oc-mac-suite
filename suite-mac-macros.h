@@ -31,6 +31,23 @@ static inline BOOL is_empty(id thing) {
 
 #endif
 
+// Types
+
+typedef void(^Block)(void);
+typedef void(^BlockBlock)(Block block);
+typedef void(^BOOLBlock)(BOOL b);
+typedef void(^ObjectBlock)(id obj);
+typedef void(^ArrayBlock)(NSArray *array);
+typedef void(^MutableArrayBlock)(NSMutableArray *array);
+typedef void(^DictionaryBlock)(NSDictionary *dic);
+typedef void(^ErrorBlock)(NSError *error);
+typedef void(^IndexBlock)(NSInteger index);
+typedef void(^ListItemBlock) (NSInteger index, id param);
+typedef void(^FloatBlock)(CGFloat afloat);
+typedef void(^StringBlock)(NSString *str);
+typedef void(^ImageBlock)(NSImage *image);
+typedef void(^ProgressBlock)(NSProgress *progress);
+
 // Const
 
 #define path_of_cache       [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0] // mac 下：/Users/lijie/Library/Caches

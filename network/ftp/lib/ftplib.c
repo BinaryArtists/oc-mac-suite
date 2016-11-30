@@ -97,8 +97,7 @@ struct NetBuf {
     char response[RESPONSE_BUFSIZ];
 };
 
-static char *version =
-    "ftplib Release 4.0 07-Jun-2013, copyright 1996-2003, 2013 Thomas Pfau";
+//static char *version = "ftplib Release 4.0 07-Jun-2013, copyright 1996-2003, 2013 Thomas Pfau";
 
 GLOBALDEF int ftplib_debug = 3;
 
@@ -388,7 +387,7 @@ static int readline(char *buf, int max, netbuf *ctl)
             x = (max >= ctl->cavail) ? ctl->cavail : max-1;
             end = memccpy(bp,ctl->cget,'\n',x);
             if (end != NULL)
-                x = end - bp;
+                x = (int)(end - bp);
             retval += x;
             bp += x;
             *bp = '\0';

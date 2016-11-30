@@ -8,6 +8,7 @@
 
 #import <objc/runtime.h>
 
+#import "_pragma_push.h"
 #import "_runtime.h"
 
 #pragma mark -
@@ -375,3 +376,5 @@ static inline NSString *methodName(Method m) {
 @implementation _Runtime
 
 @end
+
+#import "_pragma_pop.h"

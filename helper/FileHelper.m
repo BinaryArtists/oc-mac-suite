@@ -12,4 +12,12 @@
 
 @def_singleton(FileHelper)
 
+- (BOOL)openDirectoryWithPath:(NSString *)path {
+    return YES;
+}
+
+- (void)closeDirectoryWithPath:(NSString *)path {
+    
+}
+
 @end

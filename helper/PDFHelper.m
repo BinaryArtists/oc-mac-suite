@@ -12,4 +12,12 @@
 
 @def_singleton(PDFHelper)
 
+- (BOOL)openPDFWithPath:(NSString *)path {
+    return YES;
+}
+
+- (void)closePDFWithPath:(NSString *)path {
+    
+}
+
 @end

@@ -16,7 +16,7 @@
 
 #pragma mark - functions
 
-- (BOOL)openExtenalApplicationWithAppName:(NSString *)appName, ... {
+- (BOOL)openApplicationWithAppName:(NSString *)appName, ... {
     NSMutableArray *arguments = [NSMutableArray new];
     
     va_list args;

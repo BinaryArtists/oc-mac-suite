@@ -106,7 +106,8 @@
 
 - (NSString *)urlEncode:(NSString *)path
 {
-    return [path stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    return [path stringByRemovingPercentEncoding];
+//    return [path stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
 - (long long int)fileSizeAtPath:(NSString *)path
@@ -545,6 +546,7 @@
         result = (NSDictionary *)entry;
     } else {
         NSMutableDictionary *newEntry = [NSMutableDictionary dictionaryWithDictionary:entry];
+//        [newEntry setObject:newName forKey:NSURLSessionAPI];
         [newEntry setObject:newName forKey:(id)kCFFTPResourceName];
         result = newEntry;
     }
