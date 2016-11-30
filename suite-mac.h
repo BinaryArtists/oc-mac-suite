@@ -6,6 +6,8 @@
 //  Copyright © 2016 fallen.ink. All rights reserved.
 //
 
+#ifdef __OBJC__
+
 #import "suite-mac-macros.h"
 
 // foundation
@@ -23,6 +25,11 @@
 #import "PDFHelper.h"
 #import "ZIPHelper.h"
 
+// network
+#import "FTPKit.h"
+#import "FTPKit+Protected.h"
+
+#endif
 
 // 其他可能会用上的
 // 1. JSONModel: https://github.com/jsonmodel/jsonmodel/blob/master/JSONModel/JSONModel/JSONModel.h

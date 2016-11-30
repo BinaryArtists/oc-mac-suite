@@ -35,4 +35,3 @@ static inline BOOL is_empty(id thing) {
 
 #define path_of_cache       [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0] // mac 下：/Users/lijie/Library/Caches
 #define path_of_res         [[NSBundle mainBundle] resourcePath] // 这个不确定是否有写入权限
-
