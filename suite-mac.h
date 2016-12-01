@@ -12,6 +12,7 @@
 
 // foundation
 #import "NSObject+Extension.h"
+#import "NSString+Extension.h"
 
 #import "_runtime.h"
 #import "_singleton.h"
