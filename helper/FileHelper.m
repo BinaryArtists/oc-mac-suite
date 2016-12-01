@@ -8,16 +8,28 @@
 
 #import "FileHelper.h"
 
+@interface FileHelper ()
+
+@property (nonatomic, strong) NSFileManager *fileManager;
+
+@end
+
 @implementation FileHelper
 
 @def_singleton(FileHelper)
 
-- (BOOL)openDirectoryWithPath:(NSString *)path {
++ (BOOL)openDirectoryWithPath:(NSString *)path {
     return YES;
 }
 
-- (void)closeDirectoryWithPath:(NSString *)path {
++ (void)closeDirectoryWithPath:(NSString *)path {
     
+}
+
++ (NSData *)dataAtPath:(NSString *)path {
+    NSData *data = [[self sharedInstance].fileManager contentsAtPath:path];
+    
+    return data;
 }
 
 @end

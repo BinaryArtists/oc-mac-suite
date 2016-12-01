@@ -8,6 +8,28 @@
 
 #import "JSONHelper.h"
 
+@interface JSONHelper ()
+
+@end
+
 @implementation JSONHelper
+
+@def_singleton(JSONHelper)
+
++ (NSDictionary *)jsonDictionaryFromFile:(NSString *)path {
+    NSString *jsonString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:&error];
+    if(error) {
+        LOG(@"json解析失败：%@", error);
+        
+        return nil;
+    }
+    
+    return jsonDictionary;
+}
 
 @end

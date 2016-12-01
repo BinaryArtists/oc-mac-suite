@@ -11,4 +11,8 @@
 
 @interface JSONHelper : NSObject
 
+@singleton(JSONHelper)
+
++ (NSDictionary *)jsonDictionaryFromFile:(NSString *)path;
+
 @end

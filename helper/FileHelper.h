@@ -12,9 +12,10 @@
 
 @singleton(FileHelper)
 
-- (BOOL)openDirectoryWithPath:(NSString *)path;
++ (BOOL)openDirectoryWithPath:(NSString *)path;
 
-- (void)closeDirectoryWithPath:(NSString *)path;
++ (void)closeDirectoryWithPath:(NSString *)path;
 
++ (NSData *)dataAtPath:(NSString *)path;
 
 @end
