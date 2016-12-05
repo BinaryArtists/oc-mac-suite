@@ -11,27 +11,30 @@
 #import "suite-core-macros.h"
 
 // foundation
-#import "extobjc.h"
+#import "foundation/extobjc/extobjc.h"
 
-#import "NSObject+Extension.h"
-#import "NSString+Extension.h"
+#import "foundation/extension/NSObject+Extension.h"
+#import "foundation/extension/NSString+Extension.h"
 
-#import "_runtime.h"
-#import "_singleton.h"
-#import "_notification.h"
+#import "foundation/_runtime.h"
+#import "foundation/_singleton.h"
+#import "foundation/_notification.h"
+
+// support
+#import "support/ReactiveObjc/ReactiveObjC.h"
 
 // application
-#import "SHSystem.h"
+#import "application/SHSystem.h"
 
 // helper
-#import "FileHelper.h"
-#import "PDFHelper.h"
-#import "ZIPHelper.h"
-#import "JSONHelper.h"
+#import "helper/FileHelper.h"
+#import "helper/PDFHelper.h"
+#import "helper/ZIPHelper.h"
+#import "helper/JSONHelper.h"
 
 // network
-#import "FTPKit.h"
-#import "FTPKit+Protected.h"
+#import "network/ftp/FTPKit.h"
+#import "network/ftp/Protected/FTPKit+Protected.h"
 
 #endif
 
