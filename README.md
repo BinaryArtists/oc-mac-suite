@@ -13,3 +13,10 @@ development suite for mac ~
 1. add suite-core.h to your main xxx-prefix.pch
 2. add suite-app.h to your main xxx-prefix.pch
 
+## Any problems
+
+email me: fengzilijie@qq.com
+
+## Others
+
+As i import many opensource, so this project is free to use.
