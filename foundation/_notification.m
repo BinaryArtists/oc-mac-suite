@@ -7,6 +7,7 @@
 //
 
 #import "_pragma_push.h"
+#import "_runtime.h"
 #import "_notification.h"
 
 #pragma mark -

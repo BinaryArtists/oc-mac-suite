@@ -1,3 +1,6 @@
+
+#import <Foundation/Foundation.h>
+
 typedef enum {
 	FTPHandleTypeUnknown = 0,
 	FTPHandleTypeFIFO = 1,

@@ -6,6 +6,8 @@
 //  Copyright © 2016 fallen.ink. All rights reserved.
 //
 
+#import <AppKit/AppKit.h>
+
 #import "NSObject+Extension.h"
 
 @implementation NSObject (Extension)

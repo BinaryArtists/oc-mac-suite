@@ -1,4 +1,6 @@
 
+#import <Foundation/Foundation.h>
+
 extern NSString *const FTPErrorDomain;
 
 @interface NSError (NSError_FTPKitAdditions)

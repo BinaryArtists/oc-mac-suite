@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "suite-core.h"
+
 @interface SHSystem : NSObject
 
 @singleton(SHSystem)

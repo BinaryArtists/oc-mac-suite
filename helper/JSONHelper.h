@@ -9,6 +9,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "suite-core.h"
+
 @interface JSONHelper : NSObject
 
 @singleton(JSONHelper)

@@ -1,4 +1,6 @@
 
+#import <Foundation/Foundation.h>
+
 @interface NSString (NSString_FTPKitAdditions)
 
 /**
