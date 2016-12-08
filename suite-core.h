@@ -22,6 +22,7 @@
 
 // support
 #import "support/ReactiveObjc/ReactiveObjC.h"
+#import "support/EventBus/EventBus.h"
 
 // application
 #import "application/SHSystem.h"

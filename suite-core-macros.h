@@ -64,5 +64,9 @@ typedef void(^ProgressBlock)(NSProgress *progress);
 
 // Const
 
-#define path_of_cache       [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0] // mac 下：/Users/lijie/Library/Caches
+#define path_of_cache       [NSString stringWithFormat:@"%@", [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0]] // mac 下：/Users/lijie/Library/Caches
 #define path_of_res         [[NSBundle mainBundle] resourcePath] // 这个不确定是否有写入权限
+
+// Category import
+#define import_category( _class_name_ ) void import_##_class_name_##_compression();
+#define def_import_category( _class_name_ ) void import_##_class_name_##_compression() {}

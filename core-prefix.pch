@@ -8,6 +8,8 @@
 
 #ifdef __OBJC__
 
+#import "suite-core-macros.h"
+
 #import "extobjc.h"
 #import "metamacros.h"
 

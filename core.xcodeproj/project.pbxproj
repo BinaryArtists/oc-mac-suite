@@ -228,6 +228,10 @@
 		6A34C7641DF51AC800B585D7 /* RACValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A34C6A71DF51AC800B585D7 /* RACValueTransformer.m */; };
 		6A34C7651DF51AC800B585D7 /* ReactiveObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A34C6A81DF51AC800B585D7 /* ReactiveObjC.h */; };
 		6A34C78F1DF53D2400B585D7 /* core-prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6A34C78E1DF53D2400B585D7 /* core-prefix.pch */; };
+		6A34C79A1DF9044000B585D7 /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A34C7981DF9044000B585D7 /* Event.h */; };
+		6A34C79B1DF9044000B585D7 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A34C7991DF9044000B585D7 /* Event.m */; };
+		6A34C79E1DF9046100B585D7 /* EventBus.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A34C79C1DF9046100B585D7 /* EventBus.h */; };
+		6A34C79F1DF9046100B585D7 /* EventBus.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A34C79D1DF9046100B585D7 /* EventBus.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -453,6 +457,10 @@
 		6A34C6A71DF51AC800B585D7 /* RACValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACValueTransformer.m; sourceTree = "<group>"; };
 		6A34C6A81DF51AC800B585D7 /* ReactiveObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactiveObjC.h; sourceTree = "<group>"; };
 		6A34C78E1DF53D2400B585D7 /* core-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "core-prefix.pch"; sourceTree = "<group>"; };
+		6A34C7981DF9044000B585D7 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		6A34C7991DF9044000B585D7 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		6A34C79C1DF9046100B585D7 /* EventBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventBus.h; sourceTree = "<group>"; };
+		6A34C79D1DF9046100B585D7 /* EventBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventBus.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -635,6 +643,7 @@
 		6A34C5BE1DF5114300B585D7 /* support */ = {
 			isa = PBXGroup;
 			children = (
+				6A34C7971DF902EF00B585D7 /* EventBus */,
 				6A34C6111DF51AC700B585D7 /* ReactiveObjC */,
 			);
 			path = support;
@@ -818,6 +827,17 @@
 			path = ReactiveObjC;
 			sourceTree = "<group>";
 		};
+		6A34C7971DF902EF00B585D7 /* EventBus */ = {
+			isa = PBXGroup;
+			children = (
+				6A34C7981DF9044000B585D7 /* Event.h */,
+				6A34C7991DF9044000B585D7 /* Event.m */,
+				6A34C79C1DF9046100B585D7 /* EventBus.h */,
+				6A34C79D1DF9046100B585D7 /* EventBus.m */,
+			);
+			path = EventBus;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -853,6 +873,7 @@
 				6A34C6E11DF51AC800B585D7 /* NSInvocation+RACTypeParsing.h in Headers */,
 				6A34C5DA1DF5114300B585D7 /* EXTSelectorChecking.h in Headers */,
 				6A34C7031DF51AC800B585D7 /* RACArraySequence.h in Headers */,
+				6A34C79E1DF9046100B585D7 /* EventBus.h in Headers */,
 				6A34C6DD1DF51AC800B585D7 /* NSFileHandle+RACSupport.h in Headers */,
 				6A34C7501DF51AC800B585D7 /* RACSubscriber+Private.h in Headers */,
 				6A34C5C71DF5114300B585D7 /* NSObject+Extension.h in Headers */,
@@ -900,6 +921,7 @@
 				6A34C7091DF51AC800B585D7 /* RACChannel.h in Headers */,
 				6A34C5CB1DF5114300B585D7 /* EXTADT.h in Headers */,
 				6A34C7321DF51AC800B585D7 /* RACQueueScheduler+Subclass.h in Headers */,
+				6A34C79A1DF9044000B585D7 /* Event.h in Headers */,
 				6A34C7011DF51AC800B585D7 /* NSUserDefaults+RACSupport.h in Headers */,
 				6A34C7371DF51AC800B585D7 /* RACReturnSignal.h in Headers */,
 				6A34C6F71DF51AC800B585D7 /* NSString+RACKeyPathUtilities.h in Headers */,
@@ -1036,6 +1058,7 @@
 				6A34C5F61DF5114300B585D7 /* FTPServer.m in Sources */,
 				6A34C7201DF51AC800B585D7 /* RACEvent.m in Sources */,
 				6A34C5F31DF5114300B585D7 /* FTPHandle.m in Sources */,
+				6A34C79B1DF9044000B585D7 /* Event.m in Sources */,
 				6A34C5C01DF5114300B585D7 /* _notification.m in Sources */,
 				6A34C6DA1DF51AC800B585D7 /* NSDictionary+RACSequenceAdditions.m in Sources */,
 				6A34C6F41DF51AC800B585D7 /* NSOrderedSet+RACSequenceAdditions.m in Sources */,
@@ -1096,6 +1119,7 @@
 				6A34C72F1DF51AC800B585D7 /* RACMulticastConnection.m in Sources */,
 				6A34C5CE1DF5114300B585D7 /* EXTConcreteProtocol.m in Sources */,
 				6A34C6E61DF51AC800B585D7 /* NSObject+RACAppKitBindings.m in Sources */,
+				6A34C79F1DF9046100B585D7 /* EventBus.m in Sources */,
 				6A34C5C41DF5114300B585D7 /* _runtime.m in Sources */,
 				6A34C6EA1DF51AC800B585D7 /* NSObject+RACDescription.m in Sources */,
 				6A34C5D71DF5114300B585D7 /* EXTSafeCategory.m in Sources */,
@@ -1149,7 +1173,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -1190,7 +1214,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -1205,6 +1229,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "core-prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/support";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = macosx;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/foundation/extobjc/";
@@ -1220,6 +1245,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "core-prefix.pch";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/support";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = macosx;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/foundation/extobjc/";

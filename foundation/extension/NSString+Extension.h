@@ -13,3 +13,5 @@
 - (NSString *)append:(NSString *)string;
 
 @end
+
+import_category(NSString)

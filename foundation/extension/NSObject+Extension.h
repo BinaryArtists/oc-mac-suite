@@ -16,3 +16,5 @@
 
 
 @end
+
+import_category(NSObject)
