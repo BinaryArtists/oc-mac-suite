@@ -12,10 +12,8 @@
 
 @property (nonatomic, strong) id id;
 
-@property (nonatomic, strong) NSString *event; // event name
+@property (nonatomic, strong) NSString *name; // event name
 
 @property (nonatomic, strong) NSObject *data; // event data
-
-@property (nonatomic, strong) NSError *error;
 
 @end

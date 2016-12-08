@@ -10,23 +10,18 @@
 
 #import "Event.h"
 
-typedef void (^EventHandler)(Event *event);
+@protocol EventHandler <NSObject>
 
-extern NSString *const MessageEvent;
-extern NSString *const ErrorEvent;
+- (void)onMessage:(Event *)event;
+
+@end
 
 @interface EventBus : NSObject
 
 #pragma mark - Listener
 
 // Registers an event handler for the Message event named "eventName".
-- (void)onMessage:(NSString *)eventName handler:(EventHandler)handler;
-
-// Registers an event handler for the Message event.
-- (void)onMessage:(EventHandler)handler;
-
-// Registers an event handler for the Error event.
-- (void)onError:(EventHandler)handler;
+- (void)listen:(NSString *)eventName by:(id<EventHandler>)handler;
 
 #pragma mark - Dispatcher
 

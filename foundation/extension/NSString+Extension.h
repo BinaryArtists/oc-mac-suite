@@ -12,6 +12,11 @@
 
 - (NSString *)append:(NSString *)string;
 
+- (BOOL)is:(NSString *)aString;
+
+// generate 32 bytes randomly string.
++ (NSString *)random32;
+
 @end
 
 import_category(NSString)
