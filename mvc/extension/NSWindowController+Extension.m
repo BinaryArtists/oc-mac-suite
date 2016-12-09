@@ -35,4 +35,24 @@
     return YES;
 }
 
+#pragma mark - Transition
+
+- (void)fadeTransitionTo:(NSWindowController *)windowController {
+    windowController.window.alphaValue = 0.f;
+    [windowController.window center];
+    
+    [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
+        [context setDuration:1.0];
+        
+        [[self.window animator] setAlphaValue:0.0];
+        
+        [[windowController.window animator] setAlphaValue:1.f];
+        
+    } completionHandler:^{
+        [self.window orderOut:nil];
+        
+        [windowController.window orderFront:nil];
+    }];
+}
+
 @end

@@ -14,4 +14,8 @@
 
 - (void)resizeWithNewFrame:(CGRect)newFrame;
 
+// Transition
+
+- (void)fadeTransitionTo:(NSWindowController *)windowController; // [淡出] windowController must be a retained object!!!
+
 @end

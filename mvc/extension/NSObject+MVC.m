@@ -32,7 +32,14 @@
             if (alternativeHandler) alternativeHandler();
         }
     }];
-    
+}
+
+- (void)showErrorWithMessage:(NSString *)message onWindow:(NSWindow *)window {
+    [self showAlertWithTitle:@"错误" message:message onWindow:window defaultButton:@"确定" defaultBlock:nil alternativeButton:nil alternativeBlock:nil];
+}
+
+- (void)showWarnWithMessage:(NSString *)message onWindow:(NSWindow *)window {
+    [self showAlertWithTitle:@"警告" message:message onWindow:window defaultButton:@"确定" defaultBlock:nil alternativeButton:nil alternativeBlock:nil];
 }
 
 @end

@@ -18,4 +18,10 @@
          alternativeButton:(NSString *)alternativeText
           alternativeBlock:(Block)alternativeHandler; // 左侧按钮
 
+- (void)showErrorWithMessage:(NSString *)message
+                    onWindow:(NSWindow *)window;
+
+- (void)showWarnWithMessage:(NSString *)message
+                   onWindow:(NSWindow *)window;
+
 @end
