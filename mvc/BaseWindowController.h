@@ -8,6 +8,18 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface BaseWindowController : NSWindowController
+@class BaseViewController;
+
+@interface BaseWindowController : NSWindowController {
+    @private
+    NSMutableArray *_viewControllers;
+}
+
+- (NSArray *)viewControllers;
+- (void)setViewControllers:(NSArray*)theViewControllers;
+- (void)addViewController:(BaseViewController *)theViewController;
+- (void)removeViewController:(BaseViewController *)theViewController;
+- (void)removeAllViewControllers;
+- (void)patchResponderChain;
 
 @end

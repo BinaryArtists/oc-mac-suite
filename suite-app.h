@@ -25,5 +25,8 @@
 
 #import "BaseWebVC.h"
 #import "BaseWindowController.h"
+#import "BaseViewController.h"
+
+#import "BaseViewController+Extension.h"
 
 #endif

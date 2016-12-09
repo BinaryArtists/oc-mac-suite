@@ -48,6 +48,8 @@ typedef NS_ENUM(NSUInteger, NSViewCornerCoordinateType)
 
 - (void)setBorderWithDepth:(CGFloat)depth color:(NSColor *)color;
 
+- (void)setBackgroundColor:(NSColor *)color;
+
 #pragma mark - Nib loader
 // 除了下面这个，还有一种：https://github.com/peterpaulis/NSView-NibLoading-/blob/master/NSView%2BNibLoading.m
 

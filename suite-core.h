@@ -45,7 +45,8 @@
 // 3. WKWebView使用案例: https://github.com/saitjr/WKWebViewSimpleDemo/blob/master/2015-01-31-WKWebViewDemo/2015-01-31-WKWebViewDemo/BaiduViewController.m
 // 3.1 WKWebView包装的VC: https://github.com/Fogh/AFWebViewController/blob/master/AFWebViewController/AFWebViewController.m
 // 4. macOS打包应用的问题: http://www.cocoachina.com/bbs/read.php?tid-1704657.html
-
+// 5. 用户设置：https://github.com/kgn/DBPrefsWindowController
+// 6.
 
 // 其他一般用不上的
 // 1. gyetvan-andras/Calendar-OSX

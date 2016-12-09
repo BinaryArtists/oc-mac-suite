@@ -59,8 +59,8 @@
 #pragma mark - 
 
 - (void)_dispatchEvent:(Event *)event type:(NSString * const)type {
-    NSHashTable *errorHandlers = self.listeners[type];
-    for (id<EventHandler> handler in errorHandlers) {
+    NSHashTable *handlers = self.listeners[type];
+    for (id<EventHandler> handler in handlers) {
         dispatch_async(_messageQueue, ^{
             if (handler) {
                 [handler onMessage:event];

@@ -189,6 +189,13 @@ static char INSNibLoadingOutletsKey;
     self.layer.borderColor = color.CGColor;
 }
 
+- (void)setBackgroundColor:(NSColor *)color {
+    CALayer *backgroundLayer = [CALayer layer];
+    [backgroundLayer setBackgroundColor:color.CGColor];
+    [self setWantsLayer:YES];
+    [self setLayer:backgroundLayer];
+}
+
 #pragma mark - Nib loader
 
 + (NSNib *)ins_nibLoadingAssociatedNibWithName:(NSString *)nibName bundle:(NSBundle *)bundle {
