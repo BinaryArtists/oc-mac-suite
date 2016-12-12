@@ -23,3 +23,9 @@
 - (void)patchResponderChain;
 
 @end
+
+@interface BaseWindowController ( Config )
+
++ (void)setDefaultWindowTitle:(NSString *)title;
+
+@end

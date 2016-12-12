@@ -8,6 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+// Config
+#if !defined (EXTERN)
+#   if defined __cplusplus
+#       define EXTERN extern "C"
+#       define EXTERN_C_BEGIN extern "C" {
+#       define EXTERN_C_END }
+#   else
+#       define EXTERN extern
+#       define EXTERN_C_BEGIN
+#       define EXTERN_C_END
+#   endif
+#endif
+
 // String
 
 static inline BOOL is_empty(id thing) {
@@ -66,6 +79,9 @@ typedef void(^ProgressBlock)(NSProgress *progress);
 
 #define path_of_cache       [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0] // mac 下：/Users/lijie/Library/Caches
 #define path_of_res         [[NSBundle mainBundle] resourcePath] // 这个不确定是否有写入权限
+
+#define app_path_preview    @"/Applications/Preview.app"
+#define app_path_xcode      @"/Applications/Xcode.app"
 
 // Category import
 #define import_category( _class_name_ ) void import_##_class_name_##_compression();

@@ -9,6 +9,8 @@
 #import "BaseWindowController.h"
 #import "BaseViewController.h"
 
+static NSString * _defaultWindowTitle_ = @"test";
+
 @interface BaseWindowController () <NSWindowDelegate> // 这种方法适用SDK 10.6 以上，因为SDK 10.5 还不支持 NSWindowDelegate 。
 
 @end
@@ -29,6 +31,8 @@
 
 - (void)windowDidLoad {
     [super windowDidLoad];
+    
+    self.window.title = _defaultWindowTitle_;
 }
 
 - (void)windowWillClose:(NSNotification *)notification { // http://blog.csdn.net/perry_xiao/article/details/8738184
@@ -121,5 +125,13 @@
     }
 }
 
+
+@end
+
+@implementation BaseWindowController ( Config )
+
++ (void)setDefaultWindowTitle:(NSString *)title {
+    _defaultWindowTitle_ = title;
+}
 
 @end
