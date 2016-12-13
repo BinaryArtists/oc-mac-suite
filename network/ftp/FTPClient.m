@@ -1,7 +1,6 @@
 #import "ftplib.h"
 #import "FTPKit+Protected.h"
 #import "FTPClient.h"
-#import "NSError+Additions.h"
 
 @interface FTPClient ()
 
@@ -194,7 +193,7 @@
     return [self downloadHandle:[FTPHandle handleAtPath:remotePath type:FTPHandleTypeFile] to:localPath progress:progress];
 }
 
-- (void)downloadFile:(NSString *)remotePath to:(NSString *)localPath progress:(BOOL (^)(NSUInteger, NSUInteger))progress success:(void (^)(void))success failure:(void (^)(NSError *))failure
+- (void)downloadFile:(NSString *)remotePath to:(NSString *)localPath progress:(BOOL (^)(NSUInteger, NSUInteger))progress success:(void (^)(NSString *path))success failure:(void (^)(NSError *))failure
 {
     [self downloadHandle:[FTPHandle handleAtPath:remotePath type:FTPHandleTypeFile]  to:localPath progress:progress success:success failure:failure];
 }
@@ -218,13 +217,13 @@
     return YES;
 }
 
-- (void)downloadHandle:(FTPHandle *)handle to:(NSString *)localPath progress:(BOOL (^)(NSUInteger, NSUInteger))progress success:(void (^)(void))success failure:(void (^)(NSError *))failure
+- (void)downloadHandle:(FTPHandle *)handle to:(NSString *)localPath progress:(BOOL (^)(NSUInteger, NSUInteger))progress success:(void (^)(NSString *))success failure:(void (^)(NSError *))failure
 {
     dispatch_async(_queue, ^{
         BOOL ret = [self downloadHandle:handle to:localPath progress:progress];
         if (ret && success) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                success();
+                success(localPath);
             });
         } else if (! ret && failure) {
             [self returnFailure:failure];

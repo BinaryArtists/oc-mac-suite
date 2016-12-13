@@ -1,5 +1,4 @@
 #import "FTPCredentials.h"
-#import "NSString+Additions.h"
 
 @interface FTPCredentials()
 @property (nonatomic, strong) NSString *host;

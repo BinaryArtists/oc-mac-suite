@@ -17,4 +17,6 @@
 
 + (NSDictionary *)jsonDictionaryFromFile:(NSString *)path;
 
++ (NSDictionary *)jsonDictionaryFromData:(NSData *)data;
+
 @end

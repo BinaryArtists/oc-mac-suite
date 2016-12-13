@@ -16,3 +16,5 @@ extern NSString *const FTPErrorDomain;
 + (NSError *)FTPKitErrorWithResponse:(NSString *)response;
 
 @end
+
+import_category(NSError_FTPKitAdditions)

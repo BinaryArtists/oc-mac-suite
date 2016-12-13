@@ -32,4 +32,18 @@
     return jsonDictionary;
 }
 
++ (NSDictionary *)jsonDictionaryFromData:(NSData *)data {
+    NSError *error;
+    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data
+                                                                   options:NSJSONReadingMutableContainers
+                                                                     error:&error];
+    if(error) {
+        LOG(@"json解析失败：%@", error);
+        
+        return nil;
+    }
+    
+    return jsonDictionary;
+}
+
 @end

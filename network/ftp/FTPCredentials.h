@@ -1,6 +1,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "Categories/NSString+Additions.h"
+
 @interface FTPCredentials : NSObject
 
 @property (nonatomic, readonly) NSString *host;

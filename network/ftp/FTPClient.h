@@ -12,6 +12,7 @@
 
 #import "FTPHandle.h"
 #import "FTPCredentials.h"
+#import "Categories/NSError+Additions.h"
 
 @class FTPClient;
 
@@ -150,7 +151,7 @@
  */
 - (void)downloadFile:(NSString *)remotePath to:(NSString *)localPath
             progress:(BOOL (^)(NSUInteger received, NSUInteger totalBytes))progress
-             success:(void (^)(void))success
+             success:(void (^)(NSString *path))success
              failure:(void (^)(NSError *error))failure;
 
 /**
@@ -179,7 +180,7 @@
  */
 - (void)downloadHandle:(FTPHandle *)handle to:(NSString *)localPath
               progress:(BOOL (^)(NSUInteger received, NSUInteger totalBytes))progress
-               success:(void (^)(void))success
+               success:(void (^)(NSString *path))success
                failure:(void (^)(NSError *error))failure;
 
 /**

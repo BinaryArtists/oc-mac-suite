@@ -34,3 +34,5 @@
 }
 
 @end
+
+def_import_category(NSString_FTPKitAdditions)

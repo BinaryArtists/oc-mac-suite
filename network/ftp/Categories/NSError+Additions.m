@@ -131,3 +131,5 @@ NSString *const FTPErrorDomain = @"FTPKit";
 }
 
 @end
+
+def_import_category(NSError_FTPKitAdditions)

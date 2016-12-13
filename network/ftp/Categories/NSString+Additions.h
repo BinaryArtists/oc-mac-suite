@@ -25,3 +25,5 @@
 - (BOOL)isIntegerValue;
 
 @end
+
+import_category(NSString_FTPKitAdditions)
