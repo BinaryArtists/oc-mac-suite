@@ -23,7 +23,7 @@
 #import "NSColor+Extension.h"
 #import "NSObject+MVC.h"
 
-#import "BaseWebVC.h"
+#import "BaseWebViewController.h"
 #import "BaseWindowController.h"
 #import "BaseViewController.h"
 

@@ -1,5 +1,5 @@
 //
-//  BaseWebVC.m
+//  BaseWebViewController.m
 //  exam
 //
 //  Created by fallen.ink on 29/11/2016.
@@ -8,13 +8,13 @@
 
 #import <WebKit/WebKit.h>
 
-#import "BaseWebVC.h"
+#import "BaseWebViewController.h"
 
-@interface BaseWebVC ()
+@interface BaseWebViewController ()
 
 @end
 
-@implementation BaseWebVC
+@implementation BaseWebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
