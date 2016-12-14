@@ -51,7 +51,9 @@
 // 3.1 WKWebView包装的VC: https://github.com/Fogh/AFWebViewController/blob/master/AFWebViewController/AFWebViewController.m
 // 4. macOS打包应用的问题: http://www.cocoachina.com/bbs/read.php?tid-1704657.html
 // 5. 用户设置：https://github.com/kgn/DBPrefsWindowController
-// 6.
+// 6. 字符轮转：https://github.com/zyafa/MPScrollingTextField
+// 7. 文本自动补全：https://github.com/MindPreview/RSAutocomplete
+// 8. 文本规则输入：https://github.com/andriitishchenko/NSTextFieldMask
 
 // 其他一般用不上的
 // 1. gyetvan-andras/Calendar-OSX

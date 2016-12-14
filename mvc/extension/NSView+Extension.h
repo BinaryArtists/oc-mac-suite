@@ -9,8 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 /** Coordinate types for a given view object. */
-typedef NS_ENUM(NSUInteger, NSViewCornerCoordinateType)
-{
+typedef NS_ENUM(NSUInteger, NSViewCornerCoordinateType) {
     NSViewCornerCoordinateTypeTopLeft = 0,
     NSViewCornerCoordinateTypeTopRight,
     NSViewCornerCoordinateTypeBottomLeft,
@@ -50,21 +49,17 @@ typedef NS_ENUM(NSUInteger, NSViewCornerCoordinateType)
 
 - (void)setBackgroundColor:(NSColor *)color;
 
-#pragma mark - Nib loader
-// 除了下面这个，还有一种：https://github.com/peterpaulis/NSView-NibLoading-/blob/master/NSView%2BNibLoading.m
+@end
 
-- (void)ins_loadContentsFromNibNamed:(NSString *)nibName bundle:(NSBundle *)bundle;
-- (void)ins_loadContentsFromNibNamed:(NSString *)nibName;
+#pragma mark - Nib loadable view
+// refer to https://github.com/inspace-io/INSNibLoading
+
+@interface NSView (INSNibLoading)
 
 // Convenience method, loads a nib named after the class name.
 - (void)ins_loadContentsFromNib;
 
-// View where all content from nib will be added.
-- (NSView *)ins_contentViewForNib;
-
 @end
-
-#pragma mark - Nib loadable view
 
 // Convenience NSView subclass.
 //
@@ -73,6 +68,8 @@ typedef NS_ENUM(NSUInteger, NSViewCornerCoordinateType)
 //
 // If you need to subclass another NSView subclass (e.g. a custom UIControl),
 // you'll need to call ins_loadContentsFromNib yourself.
+//
+//  Remember: set file's owner 'CustomView' not the View, and link the Outlets.
 //
 @interface NSNibLoadableView : NSView
 @end

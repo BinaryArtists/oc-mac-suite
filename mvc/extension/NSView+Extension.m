@@ -9,174 +9,116 @@
 #import "NSView+Extension.h"
 #import <objc/runtime.h>
 
-static char INSNibLoadingAssociatedNibsKey;
-static char INSNibLoadingOutletsKey;
-
 @implementation NSView (Extension)
 
 // ------------------------------------------------------------------------------------------
-#pragma mark - Left
+#pragma mark - Left, Right, Top, Bottom
 // ------------------------------------------------------------------------------------------
-- (CGFloat)left
-{
+- (CGFloat)left {
     return self.frame.origin.x;
 }
 
-
-- (void)setLeft:(CGFloat)left
-{
+- (void)setLeft:(CGFloat)left {
     NSRect rect = self.frame;
     rect.origin.x = left;
     self.frame = rect;
 }
 
-
-// ------------------------------------------------------------------------------------------
-#pragma mark - Right
-// ------------------------------------------------------------------------------------------
-- (CGFloat)right
-{
+- (CGFloat)right {
     return self.frame.origin.x + self.frame.size.width;
 }
 
-
-- (void)setRight:(CGFloat)right
-{
+- (void)setRight:(CGFloat)right {
     NSRect rect = self.frame;
     rect.origin.x = right - rect.size.width;
     self.frame = rect;
 }
 
-
-// ------------------------------------------------------------------------------------------
-#pragma mark - Top
-// ------------------------------------------------------------------------------------------
-- (CGFloat)top
-{
+- (CGFloat)top {
     return self.frame.origin.y;
 }
 
-
-- (void)setTop:(CGFloat)top
-{
+- (void)setTop:(CGFloat)top {
     NSRect rect = self.frame;
     rect.origin.y = top - rect.size.height;
     self.frame = rect;
 }
 
-
-// ------------------------------------------------------------------------------------------
-#pragma mark - Bottom
-// ------------------------------------------------------------------------------------------
-- (CGFloat)bottom
-{
+- (CGFloat)bottom {
     return self.frame.origin.y + self.frame.size.height;
 }
 
-
-- (void)setBottom:(CGFloat)bottom
-{
+- (void)setBottom:(CGFloat)bottom {
     NSRect rect = self.frame;
     rect.origin.y = bottom;
     self.frame = rect;
 }
 
-
 // ------------------------------------------------------------------------------------------
-#pragma mark - Width
+#pragma mark - Width, Height, Size, Center
 // ------------------------------------------------------------------------------------------
-- (CGFloat)width
-{
+- (CGFloat)width {
     return self.frame.size.width;
 }
 
-
-- (void)setWidth:(CGFloat)width
-{
+- (void)setWidth:(CGFloat)width {
     NSRect rect = self.frame;
     rect.size.width = width;
     self.frame = rect;
 }
 
-
-// ------------------------------------------------------------------------------------------
-#pragma mark - Height
-// ------------------------------------------------------------------------------------------
-- (CGFloat)height
-{
+- (CGFloat)height {
     return self.frame.size.height;
 }
 
-
-- (void)setHeight:(CGFloat)height
-{
+- (void)setHeight:(CGFloat)height {
     NSRect rect = self.frame;
     rect.size.height = height;
     self.frame = rect;
 }
 
-
-// ------------------------------------------------------------------------------------------
-#pragma mark - Size
-// ------------------------------------------------------------------------------------------
-- (CGSize)size
-{
+- (CGSize)size {
     return self.frame.size;
 }
 
-
-- (void)setSize:(CGSize)size
-{
+- (void)setSize:(CGSize)size {
     NSRect rect = self.frame;
     rect.size = size;
     self.frame = rect;
 }
 
-
-// ------------------------------------------------------------------------------------------
-#pragma mark - Center
-// ------------------------------------------------------------------------------------------
-- (NSPoint)center
-{
+- (NSPoint)center {
     CGFloat centerX = self.frame.origin.x + (self.frame.size.width / 2.0);
     CGFloat centerY = self.frame.origin.y + (self.frame.size.height / 2.0);
     
     return CGPointMake(centerX, centerY);
 }
 
-
-- (void)setCenter:(CGPoint)center
-{
+- (void)setCenter:(CGPoint)center {
     CGFloat originX = center.x - (self.frame.size.width / 2.0);
     CGFloat originY = center.y - (self.frame.size.height / 2.0);
     
     self.frame = NSMakeRect(originX, originY, self.frame.size.width, self.frame.size.height);
 }
 
-
 // ------------------------------------------------------------------------------------------
 #pragma mark - Corner Coordinate
 // ------------------------------------------------------------------------------------------
 - (NSPoint)cornerCoordinateForType:(NSViewCornerCoordinateType)cornerType {
     switch (cornerType) {
-        case NSViewCornerCoordinateTypeTopLeft:
-        {
+        case NSViewCornerCoordinateTypeTopLeft: {
             return NSMakePoint(self.bounds.origin.x, self.bounds.size.height);
         }
-        case NSViewCornerCoordinateTypeTopRight:
-        {
+        case NSViewCornerCoordinateTypeTopRight: {
             return NSMakePoint(self.bounds.size.width, self.bounds.size.height);
         }
-        case NSViewCornerCoordinateTypeBottomLeft:
-        {
+        case NSViewCornerCoordinateTypeBottomLeft: {
             return NSMakePoint(self.bounds.origin.x, self.bounds.origin.y);
         }
-        case NSViewCornerCoordinateTypeBottomRight:
-        {
+        case NSViewCornerCoordinateTypeBottomRight: {
             return NSMakePoint(self.bounds.size.width, self.bounds.origin.y);
         }
-        default:
-        {
+        default: {
             return NSZeroPoint;
         }
     }
@@ -196,7 +138,14 @@ static char INSNibLoadingOutletsKey;
     [self setLayer:backgroundLayer];
 }
 
-#pragma mark - Nib loader
+@end
+
+#pragma mark - INSNibLoadedView
+
+static char INSNibLoadingAssociatedNibsKey;
+static char INSNibLoadingOutletsKey;
+
+@implementation NSView (INSNibLoading)
 
 + (NSNib *)ins_nibLoadingAssociatedNibWithName:(NSString *)nibName bundle:(NSBundle *)bundle {
     
@@ -320,8 +269,6 @@ static char INSNibLoadingOutletsKey;
 }
 
 @end
-
-#pragma mark - INSNibLoadedView
 
 @implementation NSNibLoadableView : NSView
 
