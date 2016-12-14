@@ -29,3 +29,6 @@
 + (void)setDefaultWindowTitle:(NSString *)title;
 
 @end
+
+// fallenink
+// [self resizeWithNewFrame:CGRectMake(0, 0, 500, 500)];

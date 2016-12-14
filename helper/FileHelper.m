@@ -32,15 +32,6 @@
 
 #pragma mark -
 
-
-+ (BOOL)openDirectoryWithPath:(NSString *)path {
-    return YES;
-}
-
-+ (void)closeDirectoryWithPath:(NSString *)path {
-    
-}
-
 + (BOOL)checkOrCreateDir:(NSString *)dir {
     BOOL isDir = NO;
     BOOL isFileExist = [[self sharedInstance].fileManager fileExistsAtPath:dir isDirectory:&isDir];
@@ -63,6 +54,10 @@
     }
     
     return NO;
+}
+
++ (BOOL)deletePath:(NSString *)path {
+    return [[self sharedInstance].fileManager removeItemAtPath:path error:nil];
 }
 
 + (NSData *)dataAtPath:(NSString *)path {

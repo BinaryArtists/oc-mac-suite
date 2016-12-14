@@ -482,3 +482,67 @@
 - (NSString *)printWorkingDirectory;
 
 @end
+
+/**
+ *  Usage
+ 
+ //    [ftp uploadFile:localUrl.path to:@"/copy.tgz" progress:NULL success:^(void) {
+ //        NSLog(@"Success 003");
+ //    } failure:^(NSError *error) {
+ //        NSLog(@"Error: %@", error.localizedDescription);
+ //    }];
+ 
+ //    [ftp chmodPath:@"/copy.tgz" toMode:777 success:^(void) {
+ //        NSLog(@"Success 004");
+ //    } failure:^(NSError *error) {
+ //        NSLog(@"Error: %@", error.localizedDescription);
+ //    }];
+ //
+ //    [ftp createDirectoryAtPath:@"/test" success:^(void) {
+ //        NSLog(@"Success 005");
+ //    } failure:^(NSError *error) {
+ //        NSLog(@"Error: %@", error.localizedDescription);
+ //    }];
+ 
+ //    [ftp renamePath:@"/copy.tgz" to:@"/test/copy.tgz" success:^(void) {
+ //        NSLog(@"Success 008");
+ //    } failure:^(NSError *error) {
+ //        NSLog(@"Error: %@", error.localizedDescription);
+ //    }];
+ 
+ //    [ftp deleteDirectoryAtPath:@"/test" success:^(void) {
+ //        NSLog(@"Error: Should have failed!");
+ //    } failure:^(NSError *error) {
+ //        NSLog(@"Success 011 -- Error: %@", error.localizedDescription);
+ //    }];
+ //
+ //    [ftp deleteFileAtPath:@"/test/copy.tgz" success:^(void) {
+ //        NSLog(@"Success 012");
+ //    } failure:^(NSError *error) {
+ //        NSLog(@"Error: %@", error.localizedDescription);
+ //    }];
+ 
+ //    [ftp lastModifiedAtPath:@"/test/eric test.tgz" success:^(NSDate *lastModified) {
+ //        NSLog(@"Success 013-d -- Date: %@", lastModified);
+ //        long long filesize = [ftp fileSizeAtPath:@"/test/eric test.tgz"];
+ //        if (filesize > 0) {
+ //            NSLog(@"Success 013-e -- Size: %llu", filesize);
+ //        } else {
+ //            NSLog(@"Error: filesizeAtPath: failed.");
+ //        }
+ //    } failure:^(NSError *error) {
+ //        NSLog(@"Error: %@", error.localizedDescription);
+ //    }];
+ 
+ 
+ //    [ftp directoryExistsAtPath:@"/test/Hello World" success:^(BOOL exists) {
+ //        if (exists) {
+ //            NSLog(@"Success 013-j");
+ //        } else {
+ //            NSLog(@"Error: Failed to determine if directory exists w/ space in name");
+ //        }
+ //    } failure:^(NSError *error) {
+ //        NSLog(@"Error: %@", error.localizedDescription);
+ //    }];
+ 
+ */

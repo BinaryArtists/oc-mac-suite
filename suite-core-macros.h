@@ -33,7 +33,9 @@ static inline BOOL is_empty(id thing) {
 #define is_string_empty( _str_ )    is_empty( _str_ )
 
 // inspired by https://github.com/ObornJung/OBFoundationLib/blob/master/OBFoundationLib/Macro/OBEncodeMacro.h
-#define stringify(string)                @#string
+#define stringify(string)               @#string
+
+#define string_of_obj( _obj_ )          [NSString stringWithFormat:@"%@", (NSObject *)_obj_]
 
 /**
  *  字符串拼接

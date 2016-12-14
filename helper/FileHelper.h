@@ -12,11 +12,9 @@
 
 @interface FileHelper : NSObject
 
-+ (BOOL)openDirectoryWithPath:(NSString *)path;
-
-+ (void)closeDirectoryWithPath:(NSString *)path;
-
 + (BOOL)checkOrCreateDir:(NSString *)dir;
+
++ (BOOL)deletePath:(NSString *)path;
 
 + (NSData *)dataAtPath:(NSString *)path;
 
