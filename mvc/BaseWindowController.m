@@ -33,6 +33,22 @@ static NSString * _defaultWindowTitle_ = @"test";
     [super windowDidLoad];
     
     self.window.title = _defaultWindowTitle_;
+    
+    // 禁止拖动
+    self.window.movable = NO;
+    self.window.movableByWindowBackground = NO;
+    
+    // 禁止窗口缩放
+    self.window.showsResizeIndicator = NO;
+    [self.window setIsZoomed:NO];
+    
+    // 禁止最大化
+//    NSWindowCloseButton,
+//    NSWindowMiniaturizeButton,
+//    NSWindowZoomButton,
+//    NSWindowToolbarButton,
+//    NSWindowDocumentIconButton
+    [[self.window standardWindowButton:NSWindowZoomButton] setHidden:YES];
 }
 
 - (void)windowWillClose:(NSNotification *)notification { // http://blog.csdn.net/perry_xiao/article/details/8738184
@@ -135,3 +151,26 @@ static NSString * _defaultWindowTitle_ = @"test";
 }
 
 @end
+
+// ========================================================  NSWindow 设置
+// [_window setMovableByWindowBackground:YES];  //可以拖动
+// self.window.styleMask = NSTexturedBackgroundWindowMask;  //窗口的样式；金属
+// self.window.styleMask =NSFullScreenWindowMask;
+// self.window.styleMask =NSClosableWindowMask; //是否有标题栏
+// self.window.styleMask =NSMiniaturizableWindowMask;
+// ========================================================  NSWIndow 的大小
+// self.window.styleMask =NSFloatingWindowLevel ;
+// self.window.styleMask =NSStatusWindowLevel ; // 显示全频按钮
+// self.window.styleMask =NSPopUpMenuWindowLevel ; //透明的没有标题栏窗口；
+// self.window.styleMask= kCGMinimumWindowLevelKey; //有标题栏但是没有什么东西
+// self.window.styleMask= kCGBaseWindowLevelKey;  ////没有有标题栏但输入框不能编辑
+// self.window.styleMask= kCGDesktopWindowLevelKey; //没有有标题栏但输入框可以编辑
+// self.window.styleMask= kCGBackstopMenuLevelKey;  //有标题栏 但是没有缩小按钮
+// self.window.styleMask= kCGFloatingWindowLevelKey;//有标题栏 但是只有缩小按钮
+// self.window.styleMask= kCGTornOffMenuWindowLevelKey;//没有标题栏 输入框需要用户去选择
+// self.window.styleMask= kCGDockWindowLevelKey;//有标题栏 没有全屏按钮 默认选入第一个输入框；
+// self.window.styleMask= kCGMainMenuWindowLevelKey; //没有有标题栏但输入框可以编辑 用户可以自定以大小
+// self.window.styleMask= kCGAssistiveTechHighWindowLevelKey;//没有标题栏 运行次数多了 窗口就越来越小 直到没有；
+// self.window.styleMask= kCGUtilityWindowLevelKey;//有标题栏，没有编辑按钮
+// self.window.styleMask= kCGHelpWindowLevelKey;//没有标题栏，没有编辑按钮
+// self.window.backgroundColor =[NSColor colorWithCalibratedRed:0.5f green:0.8f blue:0.9f alpha:1.0];  //背景色

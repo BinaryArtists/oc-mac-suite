@@ -49,9 +49,12 @@
         [[windowController.window animator] setAlphaValue:1.f];
         
     } completionHandler:^{
+        
         [self.window orderOut:nil];
         
+        [windowController.window center];
         [windowController.window orderFront:nil];
+        [windowController.window makeKeyWindow];
     }];
 }
 

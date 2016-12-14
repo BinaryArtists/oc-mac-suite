@@ -44,6 +44,8 @@
 
 #endif
 
+// 一个简易的Mac开发教程：http://www.jianshu.com/p/feadeb1ae7ae
+
 // 其他可能会用上的
 // 1. JSONModel: https://github.com/jsonmodel/jsonmodel/blob/master/JSONModel/JSONModel/JSONModel.h
 // 2. Masonry: https://github.com/SnapKit/Masonry, current version is 1.0.0
