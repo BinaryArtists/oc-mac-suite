@@ -49,6 +49,8 @@ typedef NS_ENUM(NSUInteger, NSViewCornerCoordinateType) {
 
 - (void)setBackgroundColor:(NSColor *)color;
 
+- (void)circular:(CGFloat)radius;
+
 @end
 
 #pragma mark - Nib loadable view

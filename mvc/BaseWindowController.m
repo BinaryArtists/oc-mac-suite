@@ -15,7 +15,9 @@ static NSString * _defaultWindowTitle_ = @"test";
 
 @end
 
-@implementation BaseWindowController
+@implementation BaseWindowController {
+    BOOL _isWindowCenter;
+}
 
 #pragma mark - Initialize
 
@@ -24,6 +26,12 @@ static NSString * _defaultWindowTitle_ = @"test";
         return nil;
     
     _viewControllers = [[NSMutableArray alloc] init];
+    
+    _isWindowCenter = NO;
+    
+    [self observeNotification:NSWindowWillCloseNotification];
+    [self observeNotification:NSWindowDidUpdateNotification];
+    
     return self;
 }
 
@@ -51,8 +59,8 @@ static NSString * _defaultWindowTitle_ = @"test";
     [[self.window standardWindowButton:NSWindowZoomButton] setHidden:YES];
 }
 
-- (void)windowWillClose:(NSNotification *)notification { // http://blog.csdn.net/perry_xiao/article/details/8738184
-//    [NSApp stop:nil];
+- (void)windowWillClose:(NSNotification *)notification {
+    [self unobserveAllNotifications];
 }
 
 - (BOOL)windowShouldClose:(id)sender {
@@ -69,6 +77,36 @@ static NSString * _defaultWindowTitle_ = @"test";
             }];
 
     return NO;
+}
+
+#pragma mark - Custom
+
+- (CGSize)preferredWindowSize {
+    return self.window.frame.size;
+}
+
+- (LocateType)preferredWindowLocateType {
+    return LocateType_CenterCenter;
+}
+
+#pragma mark - Notification handler
+
+- (void)handleNotification:(NSNotification *)notification {
+    if ([notification is:NSWindowWillCloseNotification]) {
+        
+    } else if ([notification is:NSWindowDidUpdateNotification]) {
+        if (!_isWindowCenter) {
+            CGRect screenRect = [[NSScreen mainScreen] frame];
+            CGSize selfSize = self.window.frame.size;
+            
+            CGFloat x = (screenRect.size.width - selfSize.width) / 2;
+            CGFloat y = (screenRect.size.height - selfSize.height) / 2;
+            NSRect newFrame = NSMakeRect(x, y, selfSize.width, selfSize.height);
+            
+            [self.window setFrame:newFrame display:YES animate:NO];
+            _isWindowCenter = YES;
+        }
+    }
 }
 
 #pragma mark - ViewControllers

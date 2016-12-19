@@ -8,12 +8,40 @@
 
 #import <Cocoa/Cocoa.h>
 
+typedef enum : NSUInteger {
+    LocateType_placeholder = 10,
+    
+    LocateType_LeftCenter,      // 水平居左，垂直居中
+    LocateType_LeftTop,         // 水平居左，垂直居上
+    LocateType_LeftBottom,      // 水平居左，垂直居下
+    
+    LocateType_CenterCenter,    // 水平居中，垂直居中
+    LocateType_CenterTop,       // 水平居中，垂直居上
+    LocateType_CenterBottom,    // 水平居中，垂直居下
+    
+    LocateType_RightCenter,     // 水平居右，垂直居中
+    LocateType_RightTop,        // 水平居右，垂直居上
+    LocateType_RightBottom      // 水平居右，垂直居下
+} LocateType;
+
 @class BaseViewController;
 
 @interface BaseWindowController : NSWindowController {
     @private
     NSMutableArray *_viewControllers;
 }
+
+// ----------------------------------
+// Custom
+// ----------------------------------
+
+- (CGSize)preferredWindowSize;
+
+- (LocateType)preferredWindowLocateType;
+
+// ----------------------------------
+// View controller manage
+// ----------------------------------
 
 - (NSArray *)viewControllers;
 - (void)setViewControllers:(NSArray*)theViewControllers;

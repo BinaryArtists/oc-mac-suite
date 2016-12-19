@@ -160,4 +160,6 @@
 
 @end
 
+def_import_category(_Notification);
+
 #import "_pragma_pop.h"

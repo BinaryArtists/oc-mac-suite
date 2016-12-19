@@ -86,3 +86,5 @@ typedef NSNotification NotificationType;
 @interface _Notification : NSObject
 
 @end
+
+import_category(_Notification)

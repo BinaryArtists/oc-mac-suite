@@ -126,16 +126,32 @@
 
 #pragma mark -
 
+- (void)enableBackgroundLayer {
+    if (!self.wantsLayer) {
+        CALayer *backgroundLayer = [CALayer layer];
+        [self setWantsLayer:YES];
+        [self setLayer:backgroundLayer];
+    }
+}
+
 - (void)setBorderWithDepth:(CGFloat)depth color:(NSColor *)color {
+    [self enableBackgroundLayer];
+    
     self.layer.borderWidth = depth;
     self.layer.borderColor = color.CGColor;
 }
 
 - (void)setBackgroundColor:(NSColor *)color {
-    CALayer *backgroundLayer = [CALayer layer];
-    [backgroundLayer setBackgroundColor:color.CGColor];
-    [self setWantsLayer:YES];
-    [self setLayer:backgroundLayer];
+    [self enableBackgroundLayer];
+    
+    [self.layer setBackgroundColor:color.CGColor];
+}
+
+- (void)circular:(CGFloat)radius {
+    [self enableBackgroundLayer];
+
+    self.layer.masksToBounds = YES;
+    self.layer.cornerRadius = radius;
 }
 
 @end

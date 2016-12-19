@@ -14,7 +14,7 @@
 
 #pragma mark - 
 
-- (void)stopApplication {
+- (void)stopApplication { // http://blog.csdn.net/perry_xiao/article/details/8738184
     [NSApp stop:nil];
 }
 
