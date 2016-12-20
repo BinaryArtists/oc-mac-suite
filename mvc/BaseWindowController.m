@@ -16,7 +16,7 @@ static NSString * _defaultWindowTitle_ = @"test";
 @end
 
 @implementation BaseWindowController {
-    BOOL _isWindowCenter;
+    BOOL _isRelocated;
 }
 
 #pragma mark - Initialize
@@ -27,7 +27,7 @@ static NSString * _defaultWindowTitle_ = @"test";
     
     _viewControllers = [[NSMutableArray alloc] init];
     
-    _isWindowCenter = NO;
+    _isRelocated = NO;
     
     [self observeNotification:NSWindowWillCloseNotification];
     [self observeNotification:NSWindowDidUpdateNotification];
@@ -95,16 +95,28 @@ static NSString * _defaultWindowTitle_ = @"test";
     if ([notification is:NSWindowWillCloseNotification]) {
         
     } else if ([notification is:NSWindowDidUpdateNotification]) {
-        if (!_isWindowCenter) {
+        if (!_isRelocated) {
+            LocateType locateType = [self preferredWindowLocateType];
             CGRect screenRect = [[NSScreen mainScreen] frame];
-            CGSize selfSize = self.window.frame.size;
+            CGSize selfSize = [self preferredWindowSize];
+            NSRect newFrame = NSZeroRect;
             
-            CGFloat x = (screenRect.size.width - selfSize.width) / 2;
-            CGFloat y = (screenRect.size.height - selfSize.height) / 2;
-            NSRect newFrame = NSMakeRect(x, y, selfSize.width, selfSize.height);
+            switch (locateType) {
+                case LocateType_CenterCenter: // 水平居中，垂直居中
+                {
+                    CGFloat x = (screenRect.size.width - selfSize.width) / 2;
+                    CGFloat y = (screenRect.size.height - selfSize.height) / 2;
+                    newFrame = NSMakeRect(x, y, selfSize.width, selfSize.height);
+                }
+                    break;
+                    
+                default:
+                    break;
+            }
             
             [self.window setFrame:newFrame display:YES animate:NO];
-            _isWindowCenter = YES;
+            
+            _isRelocated = YES;
         }
     }
 }
