@@ -20,6 +20,7 @@
 #import "foundation/extension/NSObject+Extension.h"
 #import "foundation/extension/NSString+Extension.h"
 #import "foundation/extension/NSWorkspace+Extension.h"
+#import "foundation/extension/NSArray+Extension.h"
 
 #import "foundation/_runtime.h"
 #import "foundation/_singleton.h"

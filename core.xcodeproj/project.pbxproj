@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A2761EB1E0AC21B006EC9F7 /* NSArray+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2761E91E0AC21B006EC9F7 /* NSArray+Extension.h */; };
+		6A2761EC1E0AC21B006EC9F7 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2761EA1E0AC21B006EC9F7 /* NSArray+Extension.m */; };
 		6A34C4D71DF50FBB00B585D7 /* core.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A34C4D61DF50FBB00B585D7 /* core.h */; };
 		6A34C4D91DF50FBB00B585D7 /* core.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A34C4D81DF50FBB00B585D7 /* core.m */; };
 		6A34C5BF1DF5114300B585D7 /* _notification.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A34C57B1DF5114300B585D7 /* _notification.h */; };
@@ -237,6 +239,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A2761E91E0AC21B006EC9F7 /* NSArray+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extension.h"; sourceTree = "<group>"; };
+		6A2761EA1E0AC21B006EC9F7 /* NSArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
 		6A34C4D31DF50FBB00B585D7 /* libcore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A34C4D61DF50FBB00B585D7 /* core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
 		6A34C4D81DF50FBB00B585D7 /* core.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = core.m; sourceTree = "<group>"; };
@@ -542,6 +546,8 @@
 				6A34C5871DF5114300B585D7 /* NSString+Extension.m */,
 				6A34C7B51DFE9D4800B585D7 /* NSWorkspace+Extension.h */,
 				6A34C7B61DFE9D4800B585D7 /* NSWorkspace+Extension.m */,
+				6A2761E91E0AC21B006EC9F7 /* NSArray+Extension.h */,
+				6A2761EA1E0AC21B006EC9F7 /* NSArray+Extension.m */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -902,6 +908,7 @@
 				6A34C6EB1DF51AC800B585D7 /* NSObject+RACKVOWrapper.h in Headers */,
 				6A34C5F21DF5114300B585D7 /* FTPHandle.h in Headers */,
 				6A34C6F11DF51AC800B585D7 /* NSObject+RACSelectorSignal.h in Headers */,
+				6A2761EB1E0AC21B006EC9F7 /* NSArray+Extension.h in Headers */,
 				6A34C7471DF51AC800B585D7 /* RACSignalSequence.h in Headers */,
 				6A34C7111DF51AC800B585D7 /* RACDisposable.h in Headers */,
 				6A34C5D41DF5114300B585D7 /* EXTRuntimeExtensions.h in Headers */,
@@ -1101,6 +1108,7 @@
 				6A34C6E41DF51AC800B585D7 /* NSNotificationCenter+RACSupport.m in Sources */,
 				6A34C7621DF51AC800B585D7 /* RACUnit.m in Sources */,
 				6A34C7441DF51AC800B585D7 /* RACSignal+Operations.m in Sources */,
+				6A2761EC1E0AC21B006EC9F7 /* NSArray+Extension.m in Sources */,
 				6A34C60E1DF5138700B585D7 /* SHSystem.m in Sources */,
 				6A34C5D51DF5114300B585D7 /* EXTRuntimeExtensions.m in Sources */,
 				6A34C6E01DF51AC800B585D7 /* NSIndexSet+RACSequenceAdditions.m in Sources */,
