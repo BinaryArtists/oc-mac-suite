@@ -55,6 +55,8 @@
         [windowController.window center];
         [windowController.window orderFront:nil];
         [windowController.window makeKeyWindow];
+        
+        [self close];
     }];
 }
 

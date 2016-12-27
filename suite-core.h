@@ -29,6 +29,7 @@
 // support
 #import "support/ReactiveObjc/ReactiveObjC.h"
 #import "support/EventBus/EventBus.h"
+#import "support/SSZipArchive/SSZipArchive.h"
 
 // application
 #import "application/SHSystem.h"
@@ -57,6 +58,7 @@
 // 6. 字符轮转：https://github.com/zyafa/MPScrollingTextField
 // 7. 文本自动补全：https://github.com/MindPreview/RSAutocomplete
 // 8. 文本规则输入：https://github.com/andriitishchenko/NSTextFieldMask
+// 9. 压缩／解压：[ZipArchive/ZipArchive](https://github.com/ZipArchive/ZipArchive)
 
 // 其他一般用不上的
 // 1. gyetvan-andras/Calendar-OSX

@@ -9,6 +9,39 @@
 /* Begin PBXBuildFile section */
 		6A2761EB1E0AC21B006EC9F7 /* NSArray+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2761E91E0AC21B006EC9F7 /* NSArray+Extension.h */; };
 		6A2761EC1E0AC21B006EC9F7 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2761EA1E0AC21B006EC9F7 /* NSArray+Extension.m */; };
+		6A2762131E126B11006EC9F7 /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2761EF1E126B11006EC9F7 /* aes.h */; };
+		6A2762141E126B11006EC9F7 /* aes_via_ace.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2761F01E126B11006EC9F7 /* aes_via_ace.h */; };
+		6A2762151E126B11006EC9F7 /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A2761F11E126B11006EC9F7 /* aescrypt.c */; };
+		6A2762161E126B11006EC9F7 /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A2761F21E126B11006EC9F7 /* aeskey.c */; };
+		6A2762171E126B11006EC9F7 /* aesopt.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2761F31E126B11006EC9F7 /* aesopt.h */; };
+		6A2762181E126B11006EC9F7 /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A2761F41E126B11006EC9F7 /* aestab.c */; };
+		6A2762191E126B11006EC9F7 /* aestab.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2761F51E126B11006EC9F7 /* aestab.h */; };
+		6A27621A1E126B11006EC9F7 /* brg_endian.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2761F61E126B11006EC9F7 /* brg_endian.h */; };
+		6A27621B1E126B11006EC9F7 /* brg_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2761F71E126B11006EC9F7 /* brg_types.h */; };
+		6A27621C1E126B11006EC9F7 /* entropy.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A2761F81E126B11006EC9F7 /* entropy.c */; };
+		6A27621D1E126B11006EC9F7 /* entropy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2761F91E126B11006EC9F7 /* entropy.h */; };
+		6A27621E1E126B11006EC9F7 /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A2761FA1E126B11006EC9F7 /* fileenc.c */; };
+		6A27621F1E126B11006EC9F7 /* fileenc.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2761FB1E126B11006EC9F7 /* fileenc.h */; };
+		6A2762201E126B11006EC9F7 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A2761FC1E126B11006EC9F7 /* hmac.c */; };
+		6A2762211E126B11006EC9F7 /* hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2761FD1E126B11006EC9F7 /* hmac.h */; };
+		6A2762221E126B11006EC9F7 /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A2761FE1E126B11006EC9F7 /* prng.c */; };
+		6A2762231E126B11006EC9F7 /* prng.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2761FF1E126B11006EC9F7 /* prng.h */; };
+		6A2762241E126B11006EC9F7 /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A2762001E126B11006EC9F7 /* pwd2key.c */; };
+		6A2762251E126B11006EC9F7 /* pwd2key.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2762011E126B11006EC9F7 /* pwd2key.h */; };
+		6A2762261E126B11006EC9F7 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A2762021E126B11006EC9F7 /* sha1.c */; };
+		6A2762271E126B11006EC9F7 /* sha1.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2762031E126B11006EC9F7 /* sha1.h */; };
+		6A2762281E126B11006EC9F7 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2762061E126B11006EC9F7 /* crypt.h */; };
+		6A2762291E126B11006EC9F7 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A2762071E126B11006EC9F7 /* ioapi.c */; };
+		6A27622A1E126B11006EC9F7 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2762081E126B11006EC9F7 /* ioapi.h */; };
+		6A27622B1E126B11006EC9F7 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A2762091E126B11006EC9F7 /* mztools.c */; };
+		6A27622C1E126B11006EC9F7 /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A27620A1E126B11006EC9F7 /* mztools.h */; };
+		6A27622D1E126B11006EC9F7 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A27620B1E126B11006EC9F7 /* unzip.c */; };
+		6A27622E1E126B11006EC9F7 /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A27620C1E126B11006EC9F7 /* unzip.h */; };
+		6A27622F1E126B11006EC9F7 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A27620D1E126B11006EC9F7 /* zip.c */; };
+		6A2762301E126B11006EC9F7 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A27620E1E126B11006EC9F7 /* zip.h */; };
+		6A2762311E126B11006EC9F7 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A27620F1E126B11006EC9F7 /* SSZipArchive.h */; };
+		6A2762321E126B11006EC9F7 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2762101E126B11006EC9F7 /* SSZipArchive.m */; };
+		6A2762331E126B11006EC9F7 /* SSZipCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2762111E126B11006EC9F7 /* SSZipCommon.h */; };
 		6A34C4D71DF50FBB00B585D7 /* core.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A34C4D61DF50FBB00B585D7 /* core.h */; };
 		6A34C4D91DF50FBB00B585D7 /* core.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A34C4D81DF50FBB00B585D7 /* core.m */; };
 		6A34C5BF1DF5114300B585D7 /* _notification.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A34C57B1DF5114300B585D7 /* _notification.h */; };
@@ -241,6 +274,39 @@
 /* Begin PBXFileReference section */
 		6A2761E91E0AC21B006EC9F7 /* NSArray+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extension.h"; sourceTree = "<group>"; };
 		6A2761EA1E0AC21B006EC9F7 /* NSArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
+		6A2761EF1E126B11006EC9F7 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		6A2761F01E126B11006EC9F7 /* aes_via_ace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes_via_ace.h; sourceTree = "<group>"; };
+		6A2761F11E126B11006EC9F7 /* aescrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aescrypt.c; sourceTree = "<group>"; };
+		6A2761F21E126B11006EC9F7 /* aeskey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aeskey.c; sourceTree = "<group>"; };
+		6A2761F31E126B11006EC9F7 /* aesopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aesopt.h; sourceTree = "<group>"; };
+		6A2761F41E126B11006EC9F7 /* aestab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aestab.c; sourceTree = "<group>"; };
+		6A2761F51E126B11006EC9F7 /* aestab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aestab.h; sourceTree = "<group>"; };
+		6A2761F61E126B11006EC9F7 /* brg_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_endian.h; sourceTree = "<group>"; };
+		6A2761F71E126B11006EC9F7 /* brg_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_types.h; sourceTree = "<group>"; };
+		6A2761F81E126B11006EC9F7 /* entropy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = entropy.c; sourceTree = "<group>"; };
+		6A2761F91E126B11006EC9F7 /* entropy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entropy.h; sourceTree = "<group>"; };
+		6A2761FA1E126B11006EC9F7 /* fileenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fileenc.c; sourceTree = "<group>"; };
+		6A2761FB1E126B11006EC9F7 /* fileenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileenc.h; sourceTree = "<group>"; };
+		6A2761FC1E126B11006EC9F7 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		6A2761FD1E126B11006EC9F7 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		6A2761FE1E126B11006EC9F7 /* prng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prng.c; sourceTree = "<group>"; };
+		6A2761FF1E126B11006EC9F7 /* prng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prng.h; sourceTree = "<group>"; };
+		6A2762001E126B11006EC9F7 /* pwd2key.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pwd2key.c; sourceTree = "<group>"; };
+		6A2762011E126B11006EC9F7 /* pwd2key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pwd2key.h; sourceTree = "<group>"; };
+		6A2762021E126B11006EC9F7 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		6A2762031E126B11006EC9F7 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		6A2762061E126B11006EC9F7 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		6A2762071E126B11006EC9F7 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		6A2762081E126B11006EC9F7 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		6A2762091E126B11006EC9F7 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		6A27620A1E126B11006EC9F7 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		6A27620B1E126B11006EC9F7 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		6A27620C1E126B11006EC9F7 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		6A27620D1E126B11006EC9F7 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		6A27620E1E126B11006EC9F7 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		6A27620F1E126B11006EC9F7 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		6A2762101E126B11006EC9F7 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		6A2762111E126B11006EC9F7 /* SSZipCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipCommon.h; sourceTree = "<group>"; };
 		6A34C4D31DF50FBB00B585D7 /* libcore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A34C4D61DF50FBB00B585D7 /* core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
 		6A34C4D81DF50FBB00B585D7 /* core.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = core.m; sourceTree = "<group>"; };
@@ -486,6 +552,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A2761ED1E126B11006EC9F7 /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				6A2761EE1E126B11006EC9F7 /* aes */,
+				6A2762051E126B11006EC9F7 /* minizip */,
+				6A27620F1E126B11006EC9F7 /* SSZipArchive.h */,
+				6A2762101E126B11006EC9F7 /* SSZipArchive.m */,
+				6A2762111E126B11006EC9F7 /* SSZipCommon.h */,
+			);
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		6A2761EE1E126B11006EC9F7 /* aes */ = {
+			isa = PBXGroup;
+			children = (
+				6A2761EF1E126B11006EC9F7 /* aes.h */,
+				6A2761F01E126B11006EC9F7 /* aes_via_ace.h */,
+				6A2761F11E126B11006EC9F7 /* aescrypt.c */,
+				6A2761F21E126B11006EC9F7 /* aeskey.c */,
+				6A2761F31E126B11006EC9F7 /* aesopt.h */,
+				6A2761F41E126B11006EC9F7 /* aestab.c */,
+				6A2761F51E126B11006EC9F7 /* aestab.h */,
+				6A2761F61E126B11006EC9F7 /* brg_endian.h */,
+				6A2761F71E126B11006EC9F7 /* brg_types.h */,
+				6A2761F81E126B11006EC9F7 /* entropy.c */,
+				6A2761F91E126B11006EC9F7 /* entropy.h */,
+				6A2761FA1E126B11006EC9F7 /* fileenc.c */,
+				6A2761FB1E126B11006EC9F7 /* fileenc.h */,
+				6A2761FC1E126B11006EC9F7 /* hmac.c */,
+				6A2761FD1E126B11006EC9F7 /* hmac.h */,
+				6A2761FE1E126B11006EC9F7 /* prng.c */,
+				6A2761FF1E126B11006EC9F7 /* prng.h */,
+				6A2762001E126B11006EC9F7 /* pwd2key.c */,
+				6A2762011E126B11006EC9F7 /* pwd2key.h */,
+				6A2762021E126B11006EC9F7 /* sha1.c */,
+				6A2762031E126B11006EC9F7 /* sha1.h */,
+			);
+			path = aes;
+			sourceTree = "<group>";
+		};
+		6A2762051E126B11006EC9F7 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				6A2762061E126B11006EC9F7 /* crypt.h */,
+				6A2762071E126B11006EC9F7 /* ioapi.c */,
+				6A2762081E126B11006EC9F7 /* ioapi.h */,
+				6A2762091E126B11006EC9F7 /* mztools.c */,
+				6A27620A1E126B11006EC9F7 /* mztools.h */,
+				6A27620B1E126B11006EC9F7 /* unzip.c */,
+				6A27620C1E126B11006EC9F7 /* unzip.h */,
+				6A27620D1E126B11006EC9F7 /* zip.c */,
+				6A27620E1E126B11006EC9F7 /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
 		6A34C4CA1DF50FBB00B585D7 = {
 			isa = PBXGroup;
 			children = (
@@ -655,6 +777,7 @@
 		6A34C5BE1DF5114300B585D7 /* support */ = {
 			isa = PBXGroup;
 			children = (
+				6A2761ED1E126B11006EC9F7 /* SSZipArchive */,
 				6A34C7971DF902EF00B585D7 /* EventBus */,
 				6A34C6111DF51AC700B585D7 /* ReactiveObjC */,
 			);
@@ -858,6 +981,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A34C72D1DF51AC800B585D7 /* RACMulticastConnection+Private.h in Headers */,
+				6A27621A1E126B11006EC9F7 /* brg_endian.h in Headers */,
 				6A34C7451DF51AC800B585D7 /* RACSignal.h in Headers */,
 				6A34C5EA1DF5114300B585D7 /* NSError+Additions.h in Headers */,
 				6A34C70F1DF51AC800B585D7 /* RACDelegateProxy.h in Headers */,
@@ -871,19 +995,23 @@
 				6A34C7B71DFE9D4800B585D7 /* NSWorkspace+Extension.h in Headers */,
 				6A34C5C51DF5114300B585D7 /* _singleton.h in Headers */,
 				6A34C5DE1DF5114300B585D7 /* NSInvocation+EXT.h in Headers */,
+				6A2762251E126B11006EC9F7 /* pwd2key.h in Headers */,
 				6A34C5E81DF5114300B585D7 /* ZIPHelper.h in Headers */,
 				6A34C71D1DF51AC800B585D7 /* RACErrorSignal.h in Headers */,
 				6A34C6E91DF51AC800B585D7 /* NSObject+RACDescription.h in Headers */,
 				6A34C71F1DF51AC800B585D7 /* RACEvent.h in Headers */,
 				6A34C75B1DF51AC800B585D7 /* RACTuple.h in Headers */,
 				6A34C73F1DF51AC800B585D7 /* RACSequence.h in Headers */,
+				6A2762191E126B11006EC9F7 /* aestab.h in Headers */,
 				6A34C6EF1DF51AC800B585D7 /* NSObject+RACPropertySubscribing.h in Headers */,
+				6A27621F1E126B11006EC9F7 /* fileenc.h in Headers */,
 				6A34C78F1DF53D2400B585D7 /* core-prefix.pch in Headers */,
 				6A34C6F91DF51AC800B585D7 /* NSString+RACSequenceAdditions.h in Headers */,
 				6A34C7631DF51AC800B585D7 /* RACValueTransformer.h in Headers */,
 				6A34C7431DF51AC800B585D7 /* RACSignal+Operations.h in Headers */,
 				6A34C6D31DF51AC800B585D7 /* NSControl+RACCommandSupport.h in Headers */,
 				6A34C6E11DF51AC800B585D7 /* NSInvocation+RACTypeParsing.h in Headers */,
+				6A27622A1E126B11006EC9F7 /* ioapi.h in Headers */,
 				6A34C5DA1DF5114300B585D7 /* EXTSelectorChecking.h in Headers */,
 				6A34C7031DF51AC800B585D7 /* RACArraySequence.h in Headers */,
 				6A34C79E1DF9046100B585D7 /* EventBus.h in Headers */,
@@ -897,6 +1025,7 @@
 				6A34C75D1DF51AC800B585D7 /* RACTupleSequence.h in Headers */,
 				6A34C5C91DF5114300B585D7 /* NSString+Extension.h in Headers */,
 				6A34C5D11DF5114300B585D7 /* EXTNil.h in Headers */,
+				6A27622E1E126B11006EC9F7 /* unzip.h in Headers */,
 				6A34C5C11DF5114300B585D7 /* _pragma_pop.h in Headers */,
 				6A34C6F51DF51AC800B585D7 /* NSSet+RACSequenceAdditions.h in Headers */,
 				6A34C5D61DF5114300B585D7 /* EXTSafeCategory.h in Headers */,
@@ -907,7 +1036,9 @@
 				6A34C72B1DF51AC800B585D7 /* RACKVOTrampoline.h in Headers */,
 				6A34C6EB1DF51AC800B585D7 /* NSObject+RACKVOWrapper.h in Headers */,
 				6A34C5F21DF5114300B585D7 /* FTPHandle.h in Headers */,
+				6A2762281E126B11006EC9F7 /* crypt.h in Headers */,
 				6A34C6F11DF51AC800B585D7 /* NSObject+RACSelectorSignal.h in Headers */,
+				6A2762211E126B11006EC9F7 /* hmac.h in Headers */,
 				6A2761EB1E0AC21B006EC9F7 /* NSArray+Extension.h in Headers */,
 				6A34C7471DF51AC800B585D7 /* RACSignalSequence.h in Headers */,
 				6A34C7111DF51AC800B585D7 /* RACDisposable.h in Headers */,
@@ -917,12 +1048,15 @@
 				6A34C5E01DF5114300B585D7 /* NSMethodSignature+EXT.h in Headers */,
 				6A34C7531DF51AC800B585D7 /* RACSubscriptingAssignmentTrampoline.h in Headers */,
 				6A34C5E41DF5114300B585D7 /* JSONHelper.h in Headers */,
+				6A2762171E126B11006EC9F7 /* aesopt.h in Headers */,
 				6A34C5F41DF5114300B585D7 /* FTPKit.h in Headers */,
 				6A34C70D1DF51AC800B585D7 /* RACCompoundDisposable.h in Headers */,
+				6A2762311E126B11006EC9F7 /* SSZipArchive.h in Headers */,
 				6A34C7051DF51AC800B585D7 /* RACBehaviorSubject.h in Headers */,
 				6A34C6D51DF51AC800B585D7 /* NSControl+RACTextSignalSupport.h in Headers */,
 				6A34C5CD1DF5114300B585D7 /* EXTConcreteProtocol.h in Headers */,
 				6A34C7651DF51AC800B585D7 /* ReactiveObjC.h in Headers */,
+				6A2762301E126B11006EC9F7 /* zip.h in Headers */,
 				6A34C4D71DF50FBB00B585D7 /* core.h in Headers */,
 				6A34C6E71DF51AC800B585D7 /* NSObject+RACDeallocating.h in Headers */,
 				6A34C6D91DF51AC800B585D7 /* NSDictionary+RACSequenceAdditions.h in Headers */,
@@ -933,6 +1067,7 @@
 				6A34C7391DF51AC800B585D7 /* RACScheduler+Private.h in Headers */,
 				6A34C6D11DF51AC800B585D7 /* NSArray+RACSequenceAdditions.h in Headers */,
 				6A34C7091DF51AC800B585D7 /* RACChannel.h in Headers */,
+				6A27622C1E126B11006EC9F7 /* mztools.h in Headers */,
 				6A34C5CB1DF5114300B585D7 /* EXTADT.h in Headers */,
 				6A34C7321DF51AC800B585D7 /* RACQueueScheduler+Subclass.h in Headers */,
 				6A34C79A1DF9044000B585D7 /* Event.h in Headers */,
@@ -944,6 +1079,7 @@
 				6A34C5E21DF5114300B585D7 /* FileHelper.h in Headers */,
 				6A34C5F91DF5114300B585D7 /* FTPKit+Protected.h in Headers */,
 				6A34C6DF1DF51AC800B585D7 /* NSIndexSet+RACSequenceAdditions.h in Headers */,
+				6A2762141E126B11006EC9F7 /* aes_via_ace.h in Headers */,
 				6A34C6FB1DF51AC800B585D7 /* NSString+RACSupport.h in Headers */,
 				6A34C7511DF51AC800B585D7 /* RACSubscriber.h in Headers */,
 				6A34C73D1DF51AC800B585D7 /* RACScopedDisposable.h in Headers */,
@@ -957,6 +1093,7 @@
 				6A34C7571DF51AC800B585D7 /* RACTargetQueueScheduler.h in Headers */,
 				6A34C5C21DF5114300B585D7 /* _pragma_push.h in Headers */,
 				6A34C5BF1DF5114300B585D7 /* _notification.h in Headers */,
+				6A2762271E126B11006EC9F7 /* sha1.h in Headers */,
 				6A34C5EC1DF5114300B585D7 /* NSString+Additions.h in Headers */,
 				6A34C7551DF51AC800B585D7 /* RACSubscriptionScheduler.h in Headers */,
 				6A34C7271DF51AC800B585D7 /* RACKVOChannel.h in Headers */,
@@ -965,15 +1102,20 @@
 				6A34C6E51DF51AC800B585D7 /* NSObject+RACAppKitBindings.h in Headers */,
 				6A34C6DB1DF51AC800B585D7 /* NSEnumerator+RACSequenceAdditions.h in Headers */,
 				6A34C7151DF51AC800B585D7 /* RACDynamicSignal.h in Headers */,
+				6A2762331E126B11006EC9F7 /* SSZipCommon.h in Headers */,
+				6A27621B1E126B11006EC9F7 /* brg_types.h in Headers */,
+				6A2762231E126B11006EC9F7 /* prng.h in Headers */,
 				6A34C5CF1DF5114300B585D7 /* EXTCoroutine.h in Headers */,
 				6A34C7491DF51AC800B585D7 /* RACStream+Private.h in Headers */,
 				6A34C7191DF51AC800B585D7 /* RACEmptySequence.h in Headers */,
 				6A34C7411DF51AC800B585D7 /* RACSerialDisposable.h in Headers */,
 				6A34C5F01DF5114300B585D7 /* FTPCredentials.h in Headers */,
 				6A34C5DD1DF5114300B585D7 /* metamacros.h in Headers */,
+				6A27621D1E126B11006EC9F7 /* entropy.h in Headers */,
 				6A34C6F31DF51AC800B585D7 /* NSOrderedSet+RACSequenceAdditions.h in Headers */,
 				6A34C5FD1DF5115900B585D7 /* suite-core-macros.h in Headers */,
 				6A34C71B1DF51AC800B585D7 /* RACEmptySignal.h in Headers */,
+				6A2762131E126B11006EC9F7 /* aes.h in Headers */,
 				6A34C5D81DF5114300B585D7 /* EXTScope.h in Headers */,
 				6A34C5FB1DF5114E00B585D7 /* suite-core.h in Headers */,
 				6A34C5EE1DF5114300B585D7 /* FTPClient.h in Headers */,
@@ -1042,13 +1184,17 @@
 			files = (
 				6A34C71C1DF51AC800B585D7 /* RACEmptySignal.m in Sources */,
 				6A34C7401DF51AC800B585D7 /* RACSequence.m in Sources */,
+				6A2762321E126B11006EC9F7 /* SSZipArchive.m in Sources */,
 				6A34C7641DF51AC800B585D7 /* RACValueTransformer.m in Sources */,
 				6A34C6D21DF51AC800B585D7 /* NSArray+RACSequenceAdditions.m in Sources */,
+				6A2762261E126B11006EC9F7 /* sha1.c in Sources */,
 				6A34C7001DF51AC800B585D7 /* NSURLConnection+RACSupport.m in Sources */,
 				6A34C75C1DF51AC800B585D7 /* RACTuple.m in Sources */,
 				6A34C6D01DF51AC800B585D7 /* MKAnnotationView+RACSignalSupport.m in Sources */,
+				6A27621C1E126B11006EC9F7 /* entropy.c in Sources */,
 				6A34C7481DF51AC800B585D7 /* RACSignalSequence.m in Sources */,
 				6A34C7421DF51AC800B585D7 /* RACSerialDisposable.m in Sources */,
+				6A2762221E126B11006EC9F7 /* prng.c in Sources */,
 				6A34C5D91DF5114300B585D7 /* EXTScope.m in Sources */,
 				6A34C6E21DF51AC800B585D7 /* NSInvocation+RACTypeParsing.m in Sources */,
 				6A34C7141DF51AC800B585D7 /* RACDynamicSequence.m in Sources */,
@@ -1058,6 +1204,7 @@
 				6A34C5CC1DF5114300B585D7 /* EXTADT.m in Sources */,
 				6A34C5F11DF5114300B585D7 /* FTPCredentials.m in Sources */,
 				6A34C73E1DF51AC800B585D7 /* RACScopedDisposable.m in Sources */,
+				6A27622D1E126B11006EC9F7 /* unzip.c in Sources */,
 				6A34C5DB1DF5114300B585D7 /* EXTSelectorChecking.m in Sources */,
 				6A34C7461DF51AC800B585D7 /* RACSignal.m in Sources */,
 				6A34C6EE1DF51AC800B585D7 /* NSObject+RACLifting.m in Sources */,
@@ -1071,6 +1218,7 @@
 				6A34C7121DF51AC800B585D7 /* RACDisposable.m in Sources */,
 				6A34C5F61DF5114300B585D7 /* FTPServer.m in Sources */,
 				6A34C7201DF51AC800B585D7 /* RACEvent.m in Sources */,
+				6A2762291E126B11006EC9F7 /* ioapi.c in Sources */,
 				6A34C5F31DF5114300B585D7 /* FTPHandle.m in Sources */,
 				6A34C79B1DF9044000B585D7 /* Event.m in Sources */,
 				6A34C5C01DF5114300B585D7 /* _notification.m in Sources */,
@@ -1087,13 +1235,16 @@
 				6A34C70A1DF51AC800B585D7 /* RACChannel.m in Sources */,
 				6A34C7241DF51AC800B585D7 /* RACImmediateScheduler.m in Sources */,
 				6A34C72A1DF51AC800B585D7 /* RACKVOProxy.m in Sources */,
+				6A27621E1E126B11006EC9F7 /* fileenc.c in Sources */,
 				6A34C71A1DF51AC800B585D7 /* RACEmptySequence.m in Sources */,
 				6A34C5CA1DF5114300B585D7 /* NSString+Extension.m in Sources */,
+				6A2762201E126B11006EC9F7 /* hmac.c in Sources */,
 				6A34C7221DF51AC800B585D7 /* RACGroupedSignal.m in Sources */,
 				6A34C6DE1DF51AC800B585D7 /* NSFileHandle+RACSupport.m in Sources */,
 				6A34C7181DF51AC800B585D7 /* RACEagerSequence.m in Sources */,
 				6A34C7041DF51AC800B585D7 /* RACArraySequence.m in Sources */,
 				6A34C6D41DF51AC800B585D7 /* NSControl+RACCommandSupport.m in Sources */,
+				6A2762151E126B11006EC9F7 /* aescrypt.c in Sources */,
 				6A34C7101DF51AC800B585D7 /* RACDelegateProxy.m in Sources */,
 				6A34C71E1DF51AC800B585D7 /* RACErrorSignal.m in Sources */,
 				6A34C72C1DF51AC800B585D7 /* RACKVOTrampoline.m in Sources */,
@@ -1114,20 +1265,25 @@
 				6A34C6E01DF51AC800B585D7 /* NSIndexSet+RACSequenceAdditions.m in Sources */,
 				6A34C6E81DF51AC800B585D7 /* NSObject+RACDeallocating.m in Sources */,
 				6A34C74B1DF51AC800B585D7 /* RACStream.m in Sources */,
+				6A2762181E126B11006EC9F7 /* aestab.c in Sources */,
 				6A34C7161DF51AC800B585D7 /* RACDynamicSignal.m in Sources */,
 				6A34C75E1DF51AC800B585D7 /* RACTupleSequence.m in Sources */,
 				6A34C7561DF51AC800B585D7 /* RACSubscriptionScheduler.m in Sources */,
 				6A34C6F01DF51AC800B585D7 /* NSObject+RACPropertySubscribing.m in Sources */,
 				6A34C5E91DF5114300B585D7 /* ZIPHelper.m in Sources */,
+				6A2762241E126B11006EC9F7 /* pwd2key.c in Sources */,
 				6A34C7B81DFE9D4800B585D7 /* NSWorkspace+Extension.m in Sources */,
 				6A34C7361DF51AC800B585D7 /* RACReplaySubject.m in Sources */,
 				6A34C74D1DF51AC800B585D7 /* RACStringSequence.m in Sources */,
 				6A34C7541DF51AC800B585D7 /* RACSubscriptingAssignmentTrampoline.m in Sources */,
+				6A2762161E126B11006EC9F7 /* aeskey.c in Sources */,
 				6A34C7281DF51AC800B585D7 /* RACKVOChannel.m in Sources */,
 				6A34C73C1DF51AC800B585D7 /* RACScheduler.m in Sources */,
 				6A34C5F71DF5114300B585D7 /* ftplib.c in Sources */,
+				6A27622F1E126B11006EC9F7 /* zip.c in Sources */,
 				6A34C7081DF51AC800B585D7 /* RACBlockTrampoline.m in Sources */,
 				6A34C5ED1DF5114300B585D7 /* NSString+Additions.m in Sources */,
+				6A27622B1E126B11006EC9F7 /* mztools.c in Sources */,
 				6A34C7311DF51AC800B585D7 /* RACPassthroughSubscriber.m in Sources */,
 				6A34C5E11DF5114300B585D7 /* NSMethodSignature+EXT.m in Sources */,
 				6A34C6FE1DF51AC800B585D7 /* NSText+RACSignalSupport.m in Sources */,
