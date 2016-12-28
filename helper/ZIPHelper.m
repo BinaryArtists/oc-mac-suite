@@ -7,7 +7,16 @@
 //
 
 #import "ZIPHelper.h"
+#import "suite-core.h"
 
 @implementation ZIPHelper
+
++ (BOOL)zipAtPath:(NSString *)path with:(NSString *)directory {
+    return [SSZipArchive createZipFileAtPath:path withContentsOfDirectory:directory];
+}
+
++ (BOOL)unzipAtPath:(NSString *)path to:(NSString *)destination {
+    return [SSZipArchive unzipFileAtPath:path toDestination:destination];
+}
 
 @end

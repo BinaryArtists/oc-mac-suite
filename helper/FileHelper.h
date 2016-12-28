@@ -14,7 +14,15 @@
 
 + (BOOL)checkOrCreateDir:(NSString *)dir;
 
-+ (BOOL)deletePath:(NSString *)path;
++ (BOOL)deleteFileAtPath:(NSString *)path;
+
++ (BOOL)deleteDirectoryAtPath:(NSString *)path;
+
++ (BOOL)clearDirectoryAtPath:(NSString *)Path;
+
++ (BOOL)copyfileAtPath:(NSString *)path to:(NSString *)destinationPath;
+
++ (BOOL)copyDirectoryAtPath:(NSString *)path to:(NSString *)destinationDirectory;
 
 + (NSData *)dataAtPath:(NSString *)path;
 

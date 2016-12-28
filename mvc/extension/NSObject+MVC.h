@@ -24,4 +24,8 @@
 - (void)showWarnWithMessage:(NSString *)message
                    onWindow:(NSWindow *)window;
 
+- (void)showWarnWithMessage:(NSString *)message
+                 completion:(Block)completionHandler
+                   onWindow:(NSWindow *)window;
+
 @end

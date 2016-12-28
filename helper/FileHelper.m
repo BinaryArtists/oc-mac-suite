@@ -56,8 +56,24 @@
     return NO;
 }
 
-+ (BOOL)deletePath:(NSString *)path {
++ (BOOL)deleteFileAtPath:(NSString *)path {
     return [[self sharedInstance].fileManager removeItemAtPath:path error:nil];
+}
+
++ (BOOL)deleteDirectoryAtPath:(NSString *)path {
+    return YES;
+}
+
++ (BOOL)clearDirectoryAtPath:(NSString *)Path {
+    return YES;
+}
+
++ (BOOL)copyfileAtPath:(NSString *)path to:(NSString *)destinationPath {
+    return YES;
+}
+
++ (BOOL)copyDirectoryAtPath:(NSString *)path to:(NSString *)destinationDirectory {
+    return YES;
 }
 
 + (NSData *)dataAtPath:(NSString *)path {

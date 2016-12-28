@@ -10,4 +10,10 @@
 
 @interface ZIPHelper : NSObject
 
+// 将文件夹directory，打包到path
++ (BOOL)zipAtPath:(NSString *)path with:(NSString *)directory;
+
+// 将path的打包文件，解压到destination
++ (BOOL)unzipAtPath:(NSString *)path to:(NSString *)destination;
+
 @end
