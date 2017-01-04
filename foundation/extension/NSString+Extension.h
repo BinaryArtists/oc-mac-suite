@@ -10,6 +10,8 @@
 
 @interface NSString (Extension)
 
+@property (nonatomic, readonly) NSString *filename;
+
 - (NSString *)append:(NSString *)string;
 
 - (BOOL)is:(NSString *)aString;

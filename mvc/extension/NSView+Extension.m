@@ -118,7 +118,10 @@ def_import_category(NSView)
 }
 
 - (void)setFocused:(BOOL)focused {
-    [self.window makeFirstResponder:self];
+    // 这里有个bug，当设置过的window离开焦点时，会crash
+    if (self.acceptsFirstResponder) {
+        [self.window makeFirstResponder:self];
+    }
 }
 
 // ------------------------------------------------------------------------------------------

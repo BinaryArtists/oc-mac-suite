@@ -68,3 +68,9 @@ typedef enum : NSUInteger {
 
 // fallenink
 // [self resizeWithNewFrame:CGRectMake(0, 0, 500, 500)];
+
+@interface BaseWindowController (Extension)
+
+- (void)loseFocus;
+
+@end

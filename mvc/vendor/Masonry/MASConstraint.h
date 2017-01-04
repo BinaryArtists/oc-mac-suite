@@ -50,6 +50,8 @@
 
 /**
  *	Sets the NSLayoutConstraint multiplier property
+ *   
+ *  @knowledge multipler属性表示约束值为约束对象的乘因数, dividedBy属性表示约束值为约束对象的除因数，可用于设置view的宽高比
  */
 - (MASConstraint * (^)(CGFloat multiplier))multipliedBy;
 

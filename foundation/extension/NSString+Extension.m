@@ -10,6 +10,18 @@
 
 @implementation NSString (Extension)
 
+// ----------------------------------
+// make properties
+// ----------------------------------
+
+- (NSString *)filename {
+    return [self lastPathComponent];
+}
+
+// ----------------------------------
+// other operations
+// ----------------------------------
+
 - (NSString *)append:(NSString *)string {
     NSMutableString *aString = [self mutableCopy];
     

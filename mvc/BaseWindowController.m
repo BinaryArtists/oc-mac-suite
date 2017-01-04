@@ -236,3 +236,11 @@ static NSString * _defaultWindowTitle_ = @"test";
 // self.window.styleMask= kCGUtilityWindowLevelKey;//有标题栏，没有编辑按钮
 // self.window.styleMask= kCGHelpWindowLevelKey;//没有标题栏，没有编辑按钮
 // self.window.backgroundColor =[NSColor colorWithCalibratedRed:0.5f green:0.8f blue:0.9f alpha:1.0];  //背景色
+
+@implementation BaseWindowController (Extension)
+
+- (void)loseFocus {
+    [self.window makeFirstResponder:nil];
+}
+
+@end

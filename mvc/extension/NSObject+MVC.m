@@ -22,8 +22,8 @@
     if (!is_string_empty(title)) alert.messageText = title;
     if (!is_string_empty(message)) alert.informativeText = message;
     
-    [alert addButtonWithTitle:defaultText];
-    [alert addButtonWithTitle:alternativeText];
+    if (!is_string_empty(defaultText)) [alert addButtonWithTitle:defaultText];
+    if (!is_string_empty(alternativeText)) [alert addButtonWithTitle:alternativeText];
 
     [alert beginSheetModalForWindow:window completionHandler:^(NSModalResponse returnCode) {
         if (returnCode == NSAlertFirstButtonReturn) {
