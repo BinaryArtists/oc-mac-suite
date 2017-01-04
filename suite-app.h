@@ -27,6 +27,7 @@
 #import "NSImage+Extension.h"
 #import "NSWindow+Extension.h"
 #import "NSScrollView+Extension.h"
+#import "NSTextField+Extension.h"
 
 #import "BaseWebViewController.h"
 #import "BaseWindowController.h"
