@@ -47,6 +47,8 @@ typedef enum : NSUInteger {
 
 - (LocateType)preferredWindowLocateType;
 
+- (BOOL)windowCanMove;
+
 // ----------------------------------
 // View controller manage
 // ----------------------------------

@@ -43,8 +43,8 @@ static NSString * _defaultWindowTitle_ = @"test";
     self.window.title = _defaultWindowTitle_;
     
     // 禁止拖动
-    self.window.movable = NO;
-    self.window.movableByWindowBackground = NO;
+    self.window.movable = [self windowCanMove];
+    self.window.movableByWindowBackground = [self windowCanMove];
     
     // 禁止窗口缩放
     self.window.showsResizeIndicator = NO;
@@ -97,6 +97,10 @@ static NSString * _defaultWindowTitle_ = @"test";
 
 - (LocateType)preferredWindowLocateType {
     return LocateType_CenterCenter;
+}
+
+- (BOOL)windowCanMove {
+    return NO;
 }
 
 #pragma mark - Notification handler

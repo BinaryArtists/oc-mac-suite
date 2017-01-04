@@ -10,4 +10,8 @@
 
 @implementation Event
 
+- (BOOL)is:(NSString *)eventname {
+    return [eventname isEqualToString:self.name];
+}
+
 @end

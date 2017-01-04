@@ -16,4 +16,6 @@
 
 @property (nonatomic, strong) NSObject *data; // event data
 
+- (BOOL)is:(NSString *)eventname;
+
 @end
