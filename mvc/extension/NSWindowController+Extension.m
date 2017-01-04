@@ -14,21 +14,17 @@
     return [self initWithWindowNibName:NSStringFromClass([self class])];
 }
 
-- (void)resizeWithNewFrame:(CGRect)newFrame {
+- (void)resizeWithNewSize:(CGSize)newSize {
     NSWindow *window = self.window;
-    
     NSSize currentSize = window.frame.size;
-    NSSize newSize = newFrame.size;
-    
     CGFloat deltaWidth = newSize.width - currentSize.width;
     CGFloat deltaHeight = newSize.height - currentSize.height;
     
     NSRect windowFrame = [window frame];
     windowFrame.size.height += deltaHeight;
     windowFrame.size.width += deltaWidth;
-    windowFrame.origin.y -= deltaHeight;
     
-    [window setFrame:windowFrame display:YES animate:YES];
+    [window setFrame:windowFrame display:YES animate:NO];
 }
 
 - (BOOL)shouldCloseDocument {

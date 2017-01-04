@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
+import_category(NSView)
+
 /** Coordinate types for a given view object. */
 typedef NS_ENUM(NSUInteger, NSViewCornerCoordinateType) {
     NSViewCornerCoordinateTypeTopLeft = 0,
@@ -42,6 +44,10 @@ typedef NS_ENUM(NSUInteger, NSViewCornerCoordinateType) {
 /** Sets the center property of the view to 'center'. */
 @property (nonatomic, assign) CGPoint center;
 
+- (void)removeAllSubViews;
+
+- (void)setFocused:(BOOL)focused;
+
 /** Returns the corner coordinate as a CGPoint for a given corner type. See 'NSViewCornerCoordinateType' */
 - (NSPoint)cornerCoordinateForType:(NSViewCornerCoordinateType)cornerType;
 
@@ -75,3 +81,25 @@ typedef NS_ENUM(NSUInteger, NSViewCornerCoordinateType) {
 //
 @interface NSNibLoadableView : NSView
 @end
+
+#pragma mark - Transition
+
+typedef enum : NSUInteger {
+    NSViewTransitionZoomIn,
+    NSViewTransitionZoomOut
+} NSViewTransition;
+
+@interface NSView ( Transition )
+
++ (void)transitionFromView:(NSView *)fromView
+                    toView:(NSView *)toView
+     withZoomingTransition:(NSViewTransition)transition
+                  duration:(CGFloat)duration
+         completionHandler:(void (^)(void))completionHandler;
+
+- (void)transitionToView:(NSView *)toView
+   withZoomingTransition:(NSViewTransition)transition
+                duration:(CGFloat)duration
+       completionHandler:(void (^)(void))completionHandler;
+@end
+

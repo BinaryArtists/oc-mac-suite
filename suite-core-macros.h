@@ -86,5 +86,6 @@ typedef void(^ProgressBlock)(NSProgress *progress);
 #define app_path_xcode      @"/Applications/Xcode.app"
 
 // Category import
+// iOS中静态库(static library, .a文件)中的category变得可用 http://blog.csdn.net/skylin19840101/article/details/51821932
 #define import_category( _class_name_ ) void import_##_class_name_##_compression();
 #define def_import_category( _class_name_ ) void import_##_class_name_##_compression() {}

@@ -60,6 +60,8 @@ static NSString * _defaultWindowTitle_ = @"test";
 }
 
 - (void)windowWillClose:(NSNotification *)notification {
+    [self onWindowWillClose];
+    
     [self unobserveAllNotifications];
 }
 
@@ -77,6 +79,14 @@ static NSString * _defaultWindowTitle_ = @"test";
             }];
 
     return NO;
+}
+
+- (void)onWindowUpdated {
+    // nothing
+}
+
+- (void)onWindowWillClose {
+    // nothing
 }
 
 #pragma mark - Custom
@@ -118,6 +128,8 @@ static NSString * _defaultWindowTitle_ = @"test";
             
             _isRelocated = YES;
         }
+        
+        [self onWindowUpdated];
     }
 }
 

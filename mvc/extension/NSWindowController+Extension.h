@@ -12,7 +12,7 @@
 
 - (id) _initWithNib;
 
-- (void)resizeWithNewFrame:(CGRect)newFrame;
+- (void)resizeWithNewSize:(CGSize)newSize;
 
 // Transition
 

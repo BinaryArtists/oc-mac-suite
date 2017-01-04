@@ -32,6 +32,14 @@ typedef enum : NSUInteger {
 }
 
 // ----------------------------------
+// Supply some life cycle method
+// ----------------------------------
+
+- (void)onWindowUpdated;
+
+- (void)onWindowWillClose;
+
+// ----------------------------------
 // Custom
 // ----------------------------------
 
