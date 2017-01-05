@@ -30,6 +30,9 @@
 #define FONT_M                      [NSFont systemFontOfSize:15] // TITLE
 #define FONT_S                      [NSFont systemFontOfSize:12] // CONTENT
 
+#define screen_width                [NSScreen mainScreen].frame.size.width
+#define screen_height               [NSScreen mainScreen].frame.size.height
+
 // size
 // [约束]一排两个按钮: width 72, height 21
 // [约束]一排一个按钮: width 96, height 21

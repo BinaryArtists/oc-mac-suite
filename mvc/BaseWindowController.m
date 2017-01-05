@@ -50,6 +50,17 @@ static NSString * _defaultWindowTitle_ = @"test";
     self.window.showsResizeIndicator = NO;
     [self.window setIsZoomed:NO];
     
+
+    /*
+     To make it resizable:
+     
+     [window setStyleMask:[window styleMask] | NSResizableWindowMask];
+     To make it non-resizable:
+     
+     [window setStyleMask:[window styleMask] & ~NSResizableWindowMask];
+     */
+    self.window.styleMask = self.window.styleMask & ~NSResizableWindowMask;
+    
     // 禁止最大化
 //    NSWindowCloseButton,
 //    NSWindowMiniaturizeButton,
@@ -120,6 +131,14 @@ static NSString * _defaultWindowTitle_ = @"test";
                 {
                     CGFloat x = (screenRect.size.width - selfSize.width) / 2;
                     CGFloat y = (screenRect.size.height - selfSize.height) / 2;
+                    newFrame = NSMakeRect(x, y, selfSize.width, selfSize.height);
+                }
+                    break;
+                    
+                case LocateType_LeftTop:
+                {
+                    CGFloat x = 0;
+                    CGFloat y = screenRect.size.height - selfSize.height;
                     newFrame = NSMakeRect(x, y, selfSize.width, selfSize.height);
                 }
                     break;
