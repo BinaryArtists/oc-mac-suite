@@ -79,17 +79,7 @@ static NSString * _defaultWindowTitle_ = @"test";
 }
 
 - (BOOL)windowShouldClose:(id)sender {
-    [self showAlertWithTitle:@"考试还没有结束，是否确定离开考试？"
-                     message:nil
-                    onWindow:self.window
-               defaultButton:@"是，直接交卷"
-                defaultBlock:^{
-                    [self stopApplication];
-                }
-           alternativeButton:@"否，继续答卷"
-            alternativeBlock:^{
-                
-            }];
+    [ruleInst commitExam:nil withWindow:self.window];
 
     return NO;
 }
