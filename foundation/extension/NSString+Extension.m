@@ -14,8 +14,19 @@
 // make properties
 // ----------------------------------
 
-- (NSString *)filename {
+- (NSString *)filenames {
     return [self lastPathComponent];
+}
+
+- (NSString *)filename {
+    NSString *filenames = [self lastPathComponent];
+    NSString *filename = [filenames stringByDeletingPathExtension];
+    __unused NSString *fileExtensionName = [filenames pathExtension];
+    return filename;
+}
+
+- (NSString *)fileDirectory {
+    return [self stringByDeletingLastPathComponent];
 }
 
 // ----------------------------------

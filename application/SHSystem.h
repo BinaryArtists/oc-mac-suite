@@ -30,3 +30,5 @@
 
 
 @end
+
+#define systemInst [SHSystem sharedInstance]

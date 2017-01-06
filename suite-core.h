@@ -41,7 +41,6 @@
 
 // helper
 #import "helper/FileHelper.h"
-#import "helper/PDFHelper.h"
 #import "helper/ZIPHelper.h"
 #import "helper/JSONHelper.h"
 
@@ -64,6 +63,7 @@
 // 7. 文本自动补全：https://github.com/MindPreview/RSAutocomplete
 // 8. 文本规则输入：https://github.com/andriitishchenko/NSTextFieldMask
 // 9. 压缩／解压：[ZipArchive/ZipArchive](https://github.com/ZipArchive/ZipArchive)
+// 10. mask的弹出框：[damarclabs/MLHudAlert](https://github.com/damarclabs/MLHudAlert)
 
 // 其他一般用不上的
 // 1. gyetvan-andras/Calendar-OSX

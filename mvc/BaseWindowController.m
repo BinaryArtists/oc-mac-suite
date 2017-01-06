@@ -68,6 +68,8 @@ static NSString * _defaultWindowTitle_ = @"test";
 //    NSWindowToolbarButton,
 //    NSWindowDocumentIconButton
     [[self.window standardWindowButton:NSWindowZoomButton] setHidden:YES];
+    
+    [self loseFocus];
 }
 
 - (void)windowWillClose:(NSNotification *)notification {

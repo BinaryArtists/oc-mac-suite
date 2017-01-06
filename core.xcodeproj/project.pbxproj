@@ -83,8 +83,6 @@
 		6A34C5E31DF5114300B585D7 /* FileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A34C5A21DF5114300B585D7 /* FileHelper.m */; };
 		6A34C5E41DF5114300B585D7 /* JSONHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A34C5A31DF5114300B585D7 /* JSONHelper.h */; };
 		6A34C5E51DF5114300B585D7 /* JSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A34C5A41DF5114300B585D7 /* JSONHelper.m */; };
-		6A34C5E61DF5114300B585D7 /* PDFHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A34C5A51DF5114300B585D7 /* PDFHelper.h */; };
-		6A34C5E71DF5114300B585D7 /* PDFHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A34C5A61DF5114300B585D7 /* PDFHelper.m */; };
 		6A34C5E81DF5114300B585D7 /* ZIPHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A34C5A71DF5114300B585D7 /* ZIPHelper.h */; };
 		6A34C5E91DF5114300B585D7 /* ZIPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A34C5A81DF5114300B585D7 /* ZIPHelper.m */; };
 		6A34C5EA1DF5114300B585D7 /* NSError+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A34C5AC1DF5114300B585D7 /* NSError+Additions.h */; };
@@ -351,8 +349,6 @@
 		6A34C5A21DF5114300B585D7 /* FileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHelper.m; sourceTree = "<group>"; };
 		6A34C5A31DF5114300B585D7 /* JSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHelper.h; sourceTree = "<group>"; };
 		6A34C5A41DF5114300B585D7 /* JSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHelper.m; sourceTree = "<group>"; };
-		6A34C5A51DF5114300B585D7 /* PDFHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFHelper.h; sourceTree = "<group>"; };
-		6A34C5A61DF5114300B585D7 /* PDFHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFHelper.m; sourceTree = "<group>"; };
 		6A34C5A71DF5114300B585D7 /* ZIPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIPHelper.h; sourceTree = "<group>"; };
 		6A34C5A81DF5114300B585D7 /* ZIPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIPHelper.m; sourceTree = "<group>"; };
 		6A34C5AC1DF5114300B585D7 /* NSError+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+Additions.h"; sourceTree = "<group>"; };
@@ -717,8 +713,6 @@
 				6A34C5A21DF5114300B585D7 /* FileHelper.m */,
 				6A34C5A31DF5114300B585D7 /* JSONHelper.h */,
 				6A34C5A41DF5114300B585D7 /* JSONHelper.m */,
-				6A34C5A51DF5114300B585D7 /* PDFHelper.h */,
-				6A34C5A61DF5114300B585D7 /* PDFHelper.m */,
 				6A34C5A71DF5114300B585D7 /* ZIPHelper.h */,
 				6A34C5A81DF5114300B585D7 /* ZIPHelper.m */,
 			);
@@ -1095,7 +1089,6 @@
 				6A34C5F81DF5114300B585D7 /* ftplib.h in Headers */,
 				6A34C5D31DF5114300B585D7 /* extobjc.h in Headers */,
 				6A34C7301DF51AC800B585D7 /* RACPassthroughSubscriber.h in Headers */,
-				6A34C5E61DF5114300B585D7 /* PDFHelper.h in Headers */,
 				6A34C73A1DF51AC800B585D7 /* RACScheduler+Subclass.h in Headers */,
 				6A34C7571DF51AC800B585D7 /* RACTargetQueueScheduler.h in Headers */,
 				6A34C5C21DF5114300B585D7 /* _pragma_push.h in Headers */,
@@ -1261,7 +1254,6 @@
 				6A34C7601DF51AC800B585D7 /* RACUnarySequence.m in Sources */,
 				6A34C5C81DF5114300B585D7 /* NSObject+Extension.m in Sources */,
 				6A34C70E1DF51AC800B585D7 /* RACCompoundDisposable.m in Sources */,
-				6A34C5E71DF5114300B585D7 /* PDFHelper.m in Sources */,
 				6A34C5E51DF5114300B585D7 /* JSONHelper.m in Sources */,
 				6A34C6E41DF51AC800B585D7 /* NSNotificationCenter+RACSupport.m in Sources */,
 				6A34C7621DF51AC800B585D7 /* RACUnit.m in Sources */,

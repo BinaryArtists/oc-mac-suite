@@ -10,7 +10,9 @@
 
 @interface NSString (Extension)
 
-@property (nonatomic, readonly) NSString *filename;
+@property (nonatomic, readonly) NSString *filenames; // 包含后缀名
+@property (nonatomic, readonly) NSString *filename; // 不包含后缀名
+@property (nonatomic, readonly) NSString *fileDirectory;
 
 - (NSString *)append:(NSString *)string;
 
