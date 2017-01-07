@@ -17,9 +17,16 @@
 @def_singleton(JSONHelper)
 
 + (NSDictionary *)jsonDictionaryFromFile:(NSString *)path {
-    NSString *jsonString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
     NSError *error;
+    NSString *jsonString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
+    
+    if (error) {
+        LOG(@"json string error = %@", error);
+        
+        return nil;
+    }
+    
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:jsonData
                                                         options:NSJSONReadingMutableContainers
                                                           error:&error];
