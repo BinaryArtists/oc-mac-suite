@@ -7,12 +7,37 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <sys/sysctl.h>
+#import <arpa/inet.h>
+#import <net/if.h>
+#import <ifaddrs.h>
 
 #import "SHSystem.h"
 
 @implementation SHSystem
 
 @def_singleton(SHSystem)
+
+- (NSString *)ip {
+    NSString *localIP = nil;
+    struct ifaddrs *addrs;
+    if (getifaddrs(&addrs)==0) {
+        const struct ifaddrs *cursor = addrs;
+        while (cursor != NULL) {
+            if (cursor->ifa_addr->sa_family == AF_INET && (cursor->ifa_flags & IFF_LOOPBACK) == 0) {
+                //NSString *name = [NSString stringWithUTF8String:cursor->ifa_name];
+                //if ([name isEqualToString:@"en0"]) // Wi-Fi adapter
+                {
+                    localIP = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)cursor->ifa_addr)->sin_addr)];
+                    break;
+                }
+            }
+            cursor = cursor->ifa_next;
+        }
+        freeifaddrs(addrs);
+    }
+    return localIP;
+}
 
 #pragma mark - functions
 

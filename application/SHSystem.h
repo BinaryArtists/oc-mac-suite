@@ -14,6 +14,8 @@
 
 @singleton(SHSystem)
 
+@property (nonatomic, readonly) NSString *ip;
+
 // 打开文件
 
 - (BOOL)openApplicationWithAppName:(NSString *)appName, ... NS_REQUIRES_NIL_TERMINATION; // 打开外部app, appName 可以是一个完整的命令
