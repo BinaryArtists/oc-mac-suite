@@ -61,18 +61,22 @@
 }
 
 + (BOOL)deleteDirectoryAtPath:(NSString *)path {
+    [[self sharedInstance].fileManager removeItemAtPath:path error:nil];
     return YES;
 }
 
 + (BOOL)clearDirectoryAtPath:(NSString *)Path {
+    NSAssert(NO, @"");
     return YES;
 }
 
 + (BOOL)copyfileAtPath:(NSString *)path to:(NSString *)destinationPath {
+    NSAssert(NO, @"");
     return YES;
 }
 
 + (BOOL)copyDirectoryAtPath:(NSString *)path to:(NSString *)destinationDirectory {
+    NSAssert(NO, @"");
     return YES;
 }
 
