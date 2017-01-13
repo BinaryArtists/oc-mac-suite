@@ -10,10 +10,7 @@
 
 @interface NSObject (Extension)
 
-// System call
-- (void)stopApplication;
-
-
++ (Class)baseClass;
 
 @end
 

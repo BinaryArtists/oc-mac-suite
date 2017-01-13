@@ -6,9 +6,9 @@
 //  Copyright © 2016 fallen.ink. All rights reserved.
 //
 
-#import "NSImage+Extension.h"
+#import "NSImage+MVC.h"
 
-@implementation NSImage (Extension)
+@implementation NSImage (MVC)
 
 - (NSImage *)resizeImageTosize:(NSSize)size {
     NSRect targetFrame = NSMakeRect(0, 0, size.width, size.height);
@@ -47,3 +47,5 @@
 }
 
 @end
+
+def_import_category(NSImage_MVC)

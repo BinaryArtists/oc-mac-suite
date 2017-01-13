@@ -30,7 +30,13 @@
 
 - (void)setApp:(NSString *)appname loginItemEnabled:(BOOL)enabled;
 
+#pragma mark -
+
+// System call
+- (void)stopApplication;
 
 @end
 
 #define systemInst [SHSystem sharedInstance]
+
+#define userDefaults [NSUserDefaults standardUserDefaults]

@@ -30,6 +30,8 @@
 #import "foundation/_runtime.h"
 #import "foundation/_singleton.h"
 #import "foundation/_notification.h"
+#import "foundation/_thread.h"
+#import "foundation/_property.h"
 
 // support
 #import "support/ReactiveObjc/ReactiveObjC.h"

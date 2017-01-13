@@ -24,7 +24,7 @@
 #import "NSViewController+Extension.h"
 #import "NSColor+Extension.h"
 #import "NSObject+MVC.h"
-#import "NSImage+Extension.h"
+#import "NSImage+MVC.h"
 #import "NSWindow+Extension.h"
 #import "NSScrollView+Extension.h"
 #import "NSTextField+Extension.h"

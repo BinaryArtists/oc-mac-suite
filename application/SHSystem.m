@@ -191,7 +191,6 @@
                     LSSharedFileListItemRemove(loginItems, itemRef); // 删除指定的启动项
                 }
                 CFRelease(thePath);                  
-                
             }          
             
         }          
@@ -200,6 +199,12 @@
         
         CFRelease(loginItems);
     }
+}
+
+#pragma mark - 
+
+- (void)stopApplication { // http://blog.csdn.net/perry_xiao/article/details/8738184
+    [NSApp stop:nil];
 }
 
 @end

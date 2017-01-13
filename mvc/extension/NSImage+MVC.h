@@ -8,8 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface NSImage (Extension)
+@interface NSImage (MVC)
 
 - (NSImage *)resizeImageTosize:(NSSize)size;
 
 @end
+
+import_category(NSImage_MVC)
