@@ -49,6 +49,8 @@ typedef enum : NSUInteger {
 
 - (BOOL)windowCanMove;
 
+- (BOOL)windowShouldFullScreen;
+
 // ----------------------------------
 // View controller manage
 // ----------------------------------

@@ -70,6 +70,16 @@ static NSString * _defaultWindowTitle_ = @"test";
     [[self.window standardWindowButton:NSWindowZoomButton] setHidden:YES];
     
     [self loseFocus];
+    
+    if (self.windowShouldFullScreen) {
+        CGRect screenFrame = [[NSScreen mainScreen] frame];
+        
+        [self.window setBackgroundColor: NSColor.whiteColor];
+        [self.window setCollectionBehavior:NSWindowCollectionBehaviorFullScreenPrimary];
+        [self.window setFrame:screenFrame display:YES];
+        [self.window toggleFullScreen:self];
+//        [self.window toggleFullScreen:nil];
+    }
 }
 
 - (void)windowWillClose:(NSNotification *)notification {
@@ -106,13 +116,17 @@ static NSString * _defaultWindowTitle_ = @"test";
     return NO;
 }
 
+- (BOOL)windowShouldFullScreen {
+    return NO;
+}
+
 #pragma mark - Notification handler
 
 - (void)handleNotification:(NSNotification *)notification {
     if ([notification is:NSWindowWillCloseNotification]) {
         
     } else if ([notification is:NSWindowDidUpdateNotification]) {
-        if (!_isRelocated) {
+        if (!_isRelocated && !self.windowShouldFullScreen) { // 没有重绘，同时不是全屏
             LocateType locateType = [self preferredWindowLocateType];
             CGRect screenRect = [[NSScreen mainScreen] frame];
             CGSize selfSize = [self preferredWindowSize];

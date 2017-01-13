@@ -11,8 +11,7 @@
 @implementation NSImage (Extension)
 
 + (NSImage *)imageWithFilepath:(NSString *)filepath {
-    NSURL *fileurl = [NSURL URLWithString:filepath];
-    return [[NSImage alloc] initWithContentsOfURL:fileurl];
+    return [[NSImage alloc] initWithContentsOfFile:filepath];
 }
 
 @end

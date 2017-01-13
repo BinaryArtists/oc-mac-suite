@@ -18,13 +18,14 @@
     NSView *documentView = [[NSView alloc] initWithFrame:NSMakeRect(0, 0, 0, 0)];
     scrollView.documentView = documentView;
     
-    NSView *superView = documentView.superview;
-    [documentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(superView.mas_leading);
-        make.trailing.equalTo(superView.mas_trailing);
-        make.top.equalTo(superView.mas_top);
-        make.height.mas_equalTo(200);
-    }];
+//    NSView *superView = documentView.superview;
+//    [documentView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.leading.equalTo(superView.mas_leading);
+//        make.trailing.equalTo(superView.mas_trailing);
+//        make.top.equalTo(superView.mas_top);
+////        make.bottom.equalTo(superView.mas_bottom);
+////        make.height.mas_equalTo(200);
+//    }];
     
     return scrollView;
 }
