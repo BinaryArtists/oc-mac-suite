@@ -38,6 +38,16 @@
     [self showAlertWithTitle:@"错误" message:message onWindow:window defaultButton:@"确定" defaultBlock:nil alternativeButton:nil alternativeBlock:nil];
 }
 
+- (void)showErrorWithMessage:(NSString *)message completion:(Block)completionHandler onWindow:(NSWindow *)window {
+    [self showAlertWithTitle:@"错误"
+                     message:message
+                    onWindow:window
+               defaultButton:@"确定"
+                defaultBlock:completionHandler
+           alternativeButton:nil
+            alternativeBlock:nil];
+}
+
 - (void)showWarnWithMessage:(NSString *)message onWindow:(NSWindow *)window {
     [self showAlertWithTitle:@"警告" message:message onWindow:window defaultButton:@"确定" defaultBlock:nil alternativeButton:nil alternativeBlock:nil];
 }
