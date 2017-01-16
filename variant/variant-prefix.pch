@@ -1,0 +1,16 @@
+//
+//  core-prefix.pch
+//  core
+//
+//  Created by fallen.ink on 05/12/2016.
+//  Copyright © 2016 fallen.ink. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+#import "suite-core-macros.h"
+
+#import "extobjc.h"
+#import "metamacros.h"
+
+#endif
