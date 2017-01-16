@@ -1,5 +1,5 @@
-#import <Foundation/Foundation.h>
-#import "suite-core.h"
+
+#import "HTTPConnection.h"
 
 @interface MyHTTPConnection : HTTPConnection
 

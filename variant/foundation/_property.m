@@ -7,7 +7,6 @@
 //
 
 #import "_property.h"
-#import "suite-core.h"
 
 #pragma mark -
 

@@ -8,9 +8,15 @@
 
 #ifdef __OBJC__
 
-#import "suite-core-macros.h"
+#import "variant-macros.h"
 
 #import "extobjc.h"
 #import "metamacros.h"
+
+#import "_property.h"
+#import "_singleton.h"
+
+#import "FMDatabase.h"
+#import "FMDatabaseAdditions.h"
 
 #endif

@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6AE5ABAA1E2CC28B00212FDA /* variant.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5ABA81E2CC28B00212FDA /* variant.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6AE5AD2E1E2CC30600212FDA /* GTMSystemVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5ABB11E2CC30600212FDA /* GTMSystemVersion.h */; };
-		6AE5AD2F1E2CC30600212FDA /* GTMSystemVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5ABB21E2CC30600212FDA /* GTMSystemVersion.m */; };
-		6AE5AD301E2CC30600212FDA /* GTMSystemVersionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5ABB31E2CC30600212FDA /* GTMSystemVersionTest.m */; };
 		6AE5AD311E2CC30600212FDA /* SHSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5ABB41E2CC30600212FDA /* SHSystem.h */; };
 		6AE5AD321E2CC30600212FDA /* SHSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5ABB51E2CC30600212FDA /* SHSystem.m */; };
 		6AE5AD331E2CC30600212FDA /* core.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5ABB71E2CC30600212FDA /* core.h */; };
@@ -97,9 +94,6 @@
 		6AE5AD841E2CC30600212FDA /* NSInvocation+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5AC131E2CC30600212FDA /* NSInvocation+EXT.m */; };
 		6AE5AD851E2CC30600212FDA /* NSMethodSignature+EXT.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5AC141E2CC30600212FDA /* NSMethodSignature+EXT.h */; };
 		6AE5AD861E2CC30600212FDA /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5AC151E2CC30600212FDA /* NSMethodSignature+EXT.m */; };
-		6AE5AD871E2CC30600212FDA /* GTMRegex.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5AC161E2CC30600212FDA /* GTMRegex.h */; };
-		6AE5AD881E2CC30600212FDA /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5AC171E2CC30600212FDA /* GTMRegex.m */; };
-		6AE5AD891E2CC30600212FDA /* GTMRegexTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5AC181E2CC30600212FDA /* GTMRegexTest.m */; };
 		6AE5AD8A1E2CC30600212FDA /* FileHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5AC1A1E2CC30600212FDA /* FileHelper.h */; };
 		6AE5AD8B1E2CC30600212FDA /* FileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5AC1B1E2CC30600212FDA /* FileHelper.m */; };
 		6AE5AD8C1E2CC30600212FDA /* JSONHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5AC1C1E2CC30600212FDA /* JSONHelper.h */; };
@@ -123,9 +117,8 @@
 		6AE5AD9E1E2CC30600212FDA /* ftplib.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5AC321E2CC30600212FDA /* ftplib.h */; };
 		6AE5AD9F1E2CC30600212FDA /* FTPKit+Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5AC341E2CC30600212FDA /* FTPKit+Protected.h */; };
 		6AE5ADA01E2CC30600212FDA /* placeholder in Resources */ = {isa = PBXBuildFile; fileRef = 6AE5AC361E2CC30600212FDA /* placeholder */; };
-		6AE5ADA11E2CC30600212FDA /* suite-core-macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5AC371E2CC30600212FDA /* suite-core-macros.h */; };
+		6AE5ADA11E2CC30600212FDA /* variant-macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5AC371E2CC30600212FDA /* variant-macros.h */; };
 		6AE5ADA21E2CC30600212FDA /* variant-prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5AC381E2CC30600212FDA /* variant-prefix.pch */; };
-		6AE5ADA31E2CC30600212FDA /* suite-core.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5AC391E2CC30600212FDA /* suite-core.h */; };
 		6AE5ADA41E2CC30600212FDA /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5AC3C1E2CC30600212FDA /* GCDAsyncSocket.h */; };
 		6AE5ADA51E2CC30600212FDA /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5AC3D1E2CC30600212FDA /* GCDAsyncSocket.m */; };
 		6AE5ADA61E2CC30600212FDA /* DDData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5AC401E2CC30600212FDA /* DDData.h */; };
@@ -368,9 +361,6 @@
 		6AE5ABA51E2CC28B00212FDA /* variant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = variant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE5ABA81E2CC28B00212FDA /* variant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = variant.h; sourceTree = "<group>"; };
 		6AE5ABA91E2CC28B00212FDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6AE5ABB11E2CC30600212FDA /* GTMSystemVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMSystemVersion.h; sourceTree = "<group>"; };
-		6AE5ABB21E2CC30600212FDA /* GTMSystemVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMSystemVersion.m; sourceTree = "<group>"; };
-		6AE5ABB31E2CC30600212FDA /* GTMSystemVersionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMSystemVersionTest.m; sourceTree = "<group>"; };
 		6AE5ABB41E2CC30600212FDA /* SHSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHSystem.h; sourceTree = "<group>"; };
 		6AE5ABB51E2CC30600212FDA /* SHSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHSystem.m; sourceTree = "<group>"; };
 		6AE5ABB71E2CC30600212FDA /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
@@ -457,9 +447,6 @@
 		6AE5AC131E2CC30600212FDA /* NSInvocation+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+EXT.m"; sourceTree = "<group>"; };
 		6AE5AC141E2CC30600212FDA /* NSMethodSignature+EXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMethodSignature+EXT.h"; sourceTree = "<group>"; };
 		6AE5AC151E2CC30600212FDA /* NSMethodSignature+EXT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMethodSignature+EXT.m"; sourceTree = "<group>"; };
-		6AE5AC161E2CC30600212FDA /* GTMRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMRegex.h; sourceTree = "<group>"; };
-		6AE5AC171E2CC30600212FDA /* GTMRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMRegex.m; sourceTree = "<group>"; };
-		6AE5AC181E2CC30600212FDA /* GTMRegexTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMRegexTest.m; sourceTree = "<group>"; };
 		6AE5AC1A1E2CC30600212FDA /* FileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHelper.h; sourceTree = "<group>"; };
 		6AE5AC1B1E2CC30600212FDA /* FileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHelper.m; sourceTree = "<group>"; };
 		6AE5AC1C1E2CC30600212FDA /* JSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHelper.h; sourceTree = "<group>"; };
@@ -483,9 +470,8 @@
 		6AE5AC321E2CC30600212FDA /* ftplib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftplib.h; sourceTree = "<group>"; };
 		6AE5AC341E2CC30600212FDA /* FTPKit+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FTPKit+Protected.h"; sourceTree = "<group>"; };
 		6AE5AC361E2CC30600212FDA /* placeholder */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = placeholder; sourceTree = "<group>"; };
-		6AE5AC371E2CC30600212FDA /* suite-core-macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "suite-core-macros.h"; sourceTree = "<group>"; };
+		6AE5AC371E2CC30600212FDA /* variant-macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "variant-macros.h"; sourceTree = "<group>"; };
 		6AE5AC381E2CC30600212FDA /* variant-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "variant-prefix.pch"; sourceTree = "<group>"; };
-		6AE5AC391E2CC30600212FDA /* suite-core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "suite-core.h"; sourceTree = "<group>"; };
 		6AE5AC3C1E2CC30600212FDA /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		6AE5AC3D1E2CC30600212FDA /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		6AE5AC401E2CC30600212FDA /* DDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDData.h; sourceTree = "<group>"; };
@@ -764,9 +750,8 @@
 				6AE5ABE61E2CC30600212FDA /* foundation */,
 				6AE5AC191E2CC30600212FDA /* helper */,
 				6AE5AC201E2CC30600212FDA /* network */,
-				6AE5AC371E2CC30600212FDA /* suite-core-macros.h */,
+				6AE5AC371E2CC30600212FDA /* variant-macros.h */,
 				6AE5AC381E2CC30600212FDA /* variant-prefix.pch */,
-				6AE5AC391E2CC30600212FDA /* suite-core.h */,
 				6AE5AC3A1E2CC30600212FDA /* support */,
 				6AE5ABA81E2CC28B00212FDA /* variant.h */,
 				6AE5ABA91E2CC28B00212FDA /* Info.plist */,
@@ -777,9 +762,6 @@
 		6AE5ABB01E2CC30600212FDA /* application */ = {
 			isa = PBXGroup;
 			children = (
-				6AE5ABB11E2CC30600212FDA /* GTMSystemVersion.h */,
-				6AE5ABB21E2CC30600212FDA /* GTMSystemVersion.m */,
-				6AE5ABB31E2CC30600212FDA /* GTMSystemVersionTest.m */,
 				6AE5ABB41E2CC30600212FDA /* SHSystem.h */,
 				6AE5ABB51E2CC30600212FDA /* SHSystem.m */,
 			);
@@ -913,9 +895,6 @@
 				6AE5ABF21E2CC30600212FDA /* _thread.m */,
 				6AE5ABF31E2CC30600212FDA /* extension */,
 				6AE5ABFE1E2CC30600212FDA /* extobjc */,
-				6AE5AC161E2CC30600212FDA /* GTMRegex.h */,
-				6AE5AC171E2CC30600212FDA /* GTMRegex.m */,
-				6AE5AC181E2CC30600212FDA /* GTMRegexTest.m */,
 			);
 			path = foundation;
 			sourceTree = "<group>";
@@ -1447,7 +1426,6 @@
 				6AE5AD7D1E2CC30600212FDA /* EXTScope.h in Headers */,
 				6AE5AE771E2CC30700212FDA /* fileenc.h in Headers */,
 				6AE5ADC21E2CC30600212FDA /* HTTPErrorResponse.h in Headers */,
-				6AE5ADA31E2CC30600212FDA /* suite-core.h in Headers */,
 				6AE5AE4E1E2CC30700212FDA /* RACStream+Private.h in Headers */,
 				6AE5AE061E2CC30600212FDA /* NSUserDefaults+RACSupport.h in Headers */,
 				6AE5AE301E2CC30600212FDA /* RACKVOTrampoline.h in Headers */,
@@ -1515,11 +1493,10 @@
 				6AE5AD9F1E2CC30600212FDA /* FTPKit+Protected.h in Headers */,
 				6AE5AE561E2CC30700212FDA /* RACSubscriber.h in Headers */,
 				6AE5AE6A1E2CC30700212FDA /* ReactiveObjC.h in Headers */,
-				6AE5AD871E2CC30600212FDA /* GTMRegex.h in Headers */,
 				6AE5AD5E1E2CC30600212FDA /* _property.h in Headers */,
 				6AE5AE261E2CC30600212FDA /* RACGroupedSignal.h in Headers */,
 				6AE5ADCC1E2CC30600212FDA /* EventBus.h in Headers */,
-				6AE5ADA11E2CC30600212FDA /* suite-core-macros.h in Headers */,
+				6AE5ADA11E2CC30600212FDA /* variant-macros.h in Headers */,
 				6AE5AE241E2CC30600212FDA /* RACEvent.h in Headers */,
 				6AE5AD831E2CC30600212FDA /* NSInvocation+EXT.h in Headers */,
 				6AE5AD3B1E2CC30600212FDA /* CocoaLumberjack.h in Headers */,
@@ -1548,7 +1525,6 @@
 				6AE5ADB01E2CC30600212FDA /* HTTPLogging.h in Headers */,
 				6AE5AD521E2CC30600212FDA /* MyHTTPConnection.h in Headers */,
 				6AE5AE2E1E2CC30600212FDA /* RACKVOProxy.h in Headers */,
-				6AE5AD2E1E2CC30600212FDA /* GTMSystemVersion.h in Headers */,
 				6AE5AD981E2CC30600212FDA /* FTPHandle.h in Headers */,
 				6AE5AD921E2CC30600212FDA /* NSString+Additions.h in Headers */,
 				6AE5AE041E2CC30600212FDA /* NSURLConnection+RACSupport.h in Headers */,
@@ -1706,7 +1682,6 @@
 				6AE5AD861E2CC30600212FDA /* NSMethodSignature+EXT.m in Sources */,
 				6AE5AD951E2CC30600212FDA /* FTPClient.m in Sources */,
 				6AE5AD441E2CC30600212FDA /* DDFileLogger.m in Sources */,
-				6AE5AD891E2CC30600212FDA /* GTMRegexTest.m in Sources */,
 				6AE5AD8F1E2CC30600212FDA /* ZIPHelper.m in Sources */,
 				6AE5AD8B1E2CC30600212FDA /* FileHelper.m in Sources */,
 				6AE5AE741E2CC30700212FDA /* entropy.c in Sources */,
@@ -1730,7 +1705,6 @@
 				6AE5AE5F1E2CC30700212FDA /* RACTestScheduler.m in Sources */,
 				6AE5AD9C1E2CC30600212FDA /* FTPServer.m in Sources */,
 				6AE5AE7C1E2CC30700212FDA /* pwd2key.c in Sources */,
-				6AE5AD301E2CC30600212FDA /* GTMSystemVersionTest.m in Sources */,
 				6AE5ADAB1E2CC30600212FDA /* DDRange.m in Sources */,
 				6AE5AD3F1E2CC30600212FDA /* DDASLLogCapture.m in Sources */,
 				6AE5AD4B1E2CC30600212FDA /* DDTTYLogger.m in Sources */,
@@ -1773,7 +1747,6 @@
 				6AE5AD7A1E2CC30600212FDA /* EXTRuntimeExtensions.m in Sources */,
 				6AE5AE0B1E2CC30600212FDA /* RACBehaviorSubject.m in Sources */,
 				6AE5AD7E1E2CC30600212FDA /* EXTScope.m in Sources */,
-				6AE5AD881E2CC30600212FDA /* GTMRegex.m in Sources */,
 				6AE5AE811E2CC30700212FDA /* ioapi.c in Sources */,
 				6AE5AD321E2CC30600212FDA /* SHSystem.m in Sources */,
 				6AE5AE2F1E2CC30600212FDA /* RACKVOProxy.m in Sources */,
@@ -1806,7 +1779,6 @@
 				6AE5ADC71E2CC30600212FDA /* HTTPRedirectResponse.m in Sources */,
 				6AE5ADE71E2CC30600212FDA /* NSInvocation+RACTypeParsing.m in Sources */,
 				6AE5AD5F1E2CC30600212FDA /* _property.m in Sources */,
-				6AE5AD2F1E2CC30600212FDA /* GTMSystemVersion.m in Sources */,
 				6AE5AD631E2CC30600212FDA /* _singleton.m in Sources */,
 				6AE5AE291E2CC30600212FDA /* RACImmediateScheduler.m in Sources */,
 				6AE5ADF31E2CC30600212FDA /* NSObject+RACLifting.m in Sources */,
@@ -1921,8 +1893,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EXECUTABLE_PREFIX = "variant/variant-prefix.pch";
+				EXECUTABLE_PREFIX = "";
 				FRAMEWORK_VERSION = A;
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "variant/variant-prefix.pch";
 				INFOPLIST_FILE = variant/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
@@ -1943,8 +1918,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EXECUTABLE_PREFIX = "variant/variant-prefix.pch";
+				EXECUTABLE_PREFIX = "";
 				FRAMEWORK_VERSION = A;
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "variant/variant-prefix.pch";
 				INFOPLIST_FILE = variant/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
@@ -1965,7 +1943,7 @@
 				6AE5ABAC1E2CC28B00212FDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		6AE5ABAD1E2CC28B00212FDA /* Build configuration list for PBXNativeTarget "variant" */ = {
 			isa = XCConfigurationList;
@@ -1974,7 +1952,7 @@
 				6AE5ABAF1E2CC28B00212FDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,7 +7,7 @@
 //
 
 #import "ZIPHelper.h"
-#import "suite-core.h"
+#import "SSZipArchive.h"
 
 @implementation ZIPHelper
 

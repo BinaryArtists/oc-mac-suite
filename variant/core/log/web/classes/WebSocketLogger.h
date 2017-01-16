@@ -1,5 +1,5 @@
-
-#import "suite-core.h"
+#import "CocoaLumberjack.h"
+#import "WebSocket.h"
 
 #define WebSocketLoggerDidDieNotification  @"WebSocketLoggerDidDie"
 

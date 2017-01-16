@@ -1,6 +1,5 @@
 
-#import <Foundation/Foundation.h>
-#import "suite-core.h"
+#import "DDAbstractDatabaseLogger.h"
 
 @class FMDatabase;
 

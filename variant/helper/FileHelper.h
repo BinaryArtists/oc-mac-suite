@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "suite-core.h"
-
 @interface FileHelper : NSObject
 
 + (BOOL)checkOrCreateDir:(NSString *)dir;

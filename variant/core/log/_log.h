@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "suite-core.h"
 #import "LumberJack/CocoaLumberjack.h"
 
 // Config wrapper for CocoaLumberJack

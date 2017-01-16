@@ -7,6 +7,7 @@
 //
 
 #import "_log.h"
+#import "HTTPServer.h"
 #import "db/FMDBLogger.h"
 #import "web/classes/MyHTTPConnection.h"
 
