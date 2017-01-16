@@ -130,6 +130,8 @@ typedef void(^ProgressBlock)(NSProgress *progress);
 #define app_path_preview    @"/Applications/Preview.app"
 #define app_path_xcode      @"/Applications/Xcode.app"
 
+#define app_name 
+
 #define invalid_index -1
 
 // Category import

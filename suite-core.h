@@ -37,6 +37,19 @@
 #import "support/ReactiveObjc/ReactiveObjC.h"
 #import "support/EventBus/EventBus.h"
 #import "support/SSZipArchive/SSZipArchive.h"
+#import "support/FMDB/FMDatabase.h"
+#import "support/FMDB/FMDatabaseAdditions.h"
+#import "support/CocoaAsyncSocket/GCDAsyncSocket.h"
+#import "support/CocoaHTTPServer/HTTPServer.h"
+#import "support/CocoaHTTPServer/HTTPAuthenticationRequest.h"
+#import "support/CocoaHTTPServer/HTTPConnection.h"
+#import "support/CocoaHTTPServer/HTTPLogging.h"
+#import "support/CocoaHTTPServer/HTTPMessage.h"
+#import "support/CocoaHTTPServer/HTTPResponse.h"
+#import "support/CocoaHTTPServer/HTTPServer.h"
+#import "support/CocoaHTTPServer/WebSocket.h"
+#import "support/CocoaHTTPServer/Responses/HTTPDataResponse.h"
+#import "support/CocoaHTTPServer/Responses/HTTPDynamicFileResponse.h"
 
 // application
 #import "application/SHSystem.h"
@@ -49,6 +62,9 @@
 // network
 #import "network/ftp/FTPKit.h"
 #import "network/ftp/Protected/FTPKit+Protected.h"
+
+#import "core/core.h"
+#import "core/log/_log.h"
 
 #endif
 
