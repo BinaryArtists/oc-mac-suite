@@ -85,3 +85,5 @@
 #if __has_include("CLIColor.h") && TARGET_OS_OSX
 #import "CLIColor.h"
 #endif
+
+static const DDLogLevel ddLogLevel = DDLogLevelDebug;

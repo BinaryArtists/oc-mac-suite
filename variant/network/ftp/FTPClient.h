@@ -14,6 +14,9 @@
 #import "FTPCredentials.h"
 #import "Categories/NSError+Additions.h"
 
+#define kFTPKitRequestBufferSize 32768
+#define kFTPKitTempBufferSize 1024
+
 @class FTPClient;
 
 @protocol FTPRequestDelegate;

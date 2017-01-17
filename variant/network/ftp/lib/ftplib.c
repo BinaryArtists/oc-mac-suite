@@ -1435,7 +1435,7 @@ static int FtpXfer(const char *localfile, const char *path,
     dbuf = malloc(FTPLIB_BUFSIZ);
     if (typ == FTPLIB_FILE_WRITE)
     {
-        while ((l = fread(dbuf, 1, FTPLIB_BUFSIZ, local)) > 0)
+        while ((l = (int)fread(dbuf, 1, FTPLIB_BUFSIZ, local)) > 0)
         {
             if ((c = FtpWrite(dbuf, l, nData)) < l)
             {

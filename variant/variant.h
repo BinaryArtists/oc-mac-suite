@@ -22,18 +22,22 @@ FOUNDATION_EXPORT const unsigned char variantVersionString[];
 // 4. 成员变量 以_开头
 // ----------------------------------
 
-//#ifdef __OBJC__
+// ----------------------------------
+// 系统库依赖
+// libsqlite, [libsqlite3.tbd is not an object file (not allowed in a library)的解决办法](http://www.cnblogs.com/terencelee/p/4953222.html)
+// libz
+// ----------------------------------
 
 #import <variant-macros.h>
 
 // foundation
 #import <foundation/extobjc/extobjc.h>
 
-#import <foundation/extension/NSObject+Extension.h>
-#import <foundation/extension/NSString+Extension.h>
-#import <foundation/extension/NSWorkspace+Extension.h>
-#import <foundation/extension/NSArray+Extension.h>
-#import <foundation/extension/NSImage+Extension.h>
+#import "foundation/extension/NSObject+Extension.h"
+#import "foundation/extension/NSString+Extension.h"
+#import "foundation/extension/NSWorkspace+Extension.h"
+#import "foundation/extension/NSArray+Extension.h"
+#import "foundation/extension/NSImage+Extension.h"
 
 #import <foundation/_runtime.h>
 #import <foundation/_singleton.h>
@@ -41,23 +45,9 @@ FOUNDATION_EXPORT const unsigned char variantVersionString[];
 #import <foundation/_thread.h>
 #import <foundation/_property.h>
 
-// support
+// support, partial using for inside module, partial using for public client
 #import <support/ReactiveObjc/ReactiveObjC.h>
 #import <support/EventBus/EventBus.h>
-#import <support/SSZipArchive/SSZipArchive.h>
-#import <support/FMDB/FMDatabase.h>
-#import <support/FMDB/FMDatabaseAdditions.h>
-#import <support/CocoaAsyncSocket/GCDAsyncSocket.h>
-#import <support/CocoaHTTPServer/HTTPServer.h>
-#import <support/CocoaHTTPServer/HTTPAuthenticationRequest.h>
-#import <support/CocoaHTTPServer/HTTPConnection.h>
-#import <support/CocoaHTTPServer/HTTPLogging.h>
-#import <support/CocoaHTTPServer/HTTPMessage.h>
-#import <support/CocoaHTTPServer/HTTPResponse.h>
-#import <support/CocoaHTTPServer/HTTPServer.h>
-#import <support/CocoaHTTPServer/WebSocket.h>
-#import <support/CocoaHTTPServer/Responses/HTTPDataResponse.h>
-#import <support/CocoaHTTPServer/Responses/HTTPDynamicFileResponse.h>
 
 // application
 #import <application/SHSystem.h>
@@ -69,12 +59,10 @@ FOUNDATION_EXPORT const unsigned char variantVersionString[];
 
 // network
 #import <network/ftp/FTPKit.h>
-#import <network/ftp/Protected/FTPKit+Protected.h>
 
+// core
 #import <core/core.h>
 #import <core/log/_log.h>
-
-//#endif
 
 // 一个简易的Mac开发教程：http://www.jianshu.com/p/feadeb1ae7ae
 

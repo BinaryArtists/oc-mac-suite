@@ -10,13 +10,47 @@
 
 #import "variant-macros.h"
 
+// foundation
 #import "extobjc.h"
 #import "metamacros.h"
 
 #import "_property.h"
 #import "_singleton.h"
 
+// support
+#import "CocoaLumberjack.h"
 #import "FMDatabase.h"
 #import "FMDatabaseAdditions.h"
+#import "SSZipArchive.h"
+#import "GCDAsyncSocket.h"
+#import "HTTPServer.h"
+#import "HTTPAuthenticationRequest.h"
+#import "HTTPConnection.h"
+#import "HTTPLogging.h"
+#import "HTTPMessage.h"
+#import "HTTPResponse.h"
+#import "HTTPServer.h"
+#import "WebSocket.h"
+#import "HTTPDataResponse.h"
+#import "HTTPDynamicFileResponse.h"
+
+// core
+#import "core.h"
+#import "_log.h"
+
+//#import <support/CocoaAsyncSocket/GCDAsyncSocket.h>
+//#import <support/CocoaHTTPServer/HTTPServer.h>
+//#import <support/CocoaHTTPServer/HTTPAuthenticationRequest.h>
+//#import <support/CocoaHTTPServer/HTTPConnection.h>
+//#import <support/CocoaHTTPServer/HTTPLogging.h>
+//#import <support/CocoaHTTPServer/HTTPMessage.h>
+//#import <support/CocoaHTTPServer/HTTPResponse.h>
+//#import <support/CocoaHTTPServer/HTTPServer.h>
+//#import <support/CocoaHTTPServer/WebSocket.h>
+//#import <support/CocoaHTTPServer/Responses/HTTPDataResponse.h>
+//#import <support/CocoaHTTPServer/Responses/HTTPDynamicFileResponse.h>
+//#import <support/SSZipArchive/SSZipArchive.h>
+//#import <support/FMDB/FMDatabase.h>
+//#import <support/FMDB/FMDatabaseAdditions.h>
 
 #endif

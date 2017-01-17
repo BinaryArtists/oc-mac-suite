@@ -1,5 +1,4 @@
 #import "ftplib.h"
-#import "FTPKit+Protected.h"
 #import "FTPClient.h"
 
 @interface FTPClient ()
@@ -119,10 +118,12 @@
     int stat = FtpSize(cPath, &bytes, FTPLIB_BINARY, conn);
     FtpQuit(conn);
     if (stat == 0) {
-        FKLogError(@"File most likely does not exist %@", path);
+        loge(@"File most likely does not exist %@", path);
         return -1;
     }
-    FKLogDebug(@"%@ bytes %d", path, bytes);
+    
+    logd(@"%@ bytes %d", path, bytes);
+    
     return (long long int)bytes;
 }
 
@@ -156,8 +157,10 @@
     NSError *error = nil;
     NSData *data = [NSData dataWithContentsOfFile:tmpPath options:NSDataReadingUncached error:&error];
     if (error) {
-        FKLogError(@"Error: %@", error.localizedDescription);
+        loge(@"Error: %@", error.localizedDescription);
+        
         self.lastError = error;
+        
         return nil;
     }
     /**
@@ -168,7 +171,7 @@
     [[NSFileManager defaultManager] removeItemAtPath:tmpPath error:&error];
     // Log the error, but do not fail.
     if (error) {
-        FKLogError(@"Failed to remove tmp file. Error: %@", error.localizedDescription);
+        loge(@"Failed to remove tmp file. Error: %@", error.localizedDescription);
     }
     NSArray *files = [self parseListData:data handle:handle showHiddentFiles:showHiddenFiles];
     return files; // If files == nil, method will set the lastError.
@@ -451,7 +454,7 @@
     [[NSFileManager defaultManager] removeItemAtPath:tmpPath error:&error];
     // Log the error, but do not fail.
     if (error) {
-        FKLogError(@"Failed to remove tmp file. Error: %@", error.localizedDescription);
+        loge(@"Failed to remove tmp file. Error: %@", error.localizedDescription);
     }
     if (! success)
         return NO;
@@ -520,7 +523,9 @@
 {
     // Do not use NSURL. It will not allow you to read the file contents.
     NSString *path = [NSTemporaryDirectory() stringByAppendingPathComponent:@"FTPKit.list"];
-    //FKLogDebug(@"path: %@", path);
+    
+    logd(@"path: %@", path);
+    
     return path;
 }
 
@@ -583,7 +588,7 @@
     } while (YES);
     
     if (offset != data.length) {
-        FKLogWarn(@"Some bytes not read!");
+        logw(@"Some bytes not read!");
     }
     
     return files;
