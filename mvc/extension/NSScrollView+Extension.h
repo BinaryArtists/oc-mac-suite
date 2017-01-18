@@ -10,6 +10,18 @@
 
 @interface NSScrollView (Extension)
 
+// U should update documentView 's height at [layout] function, like as below:
+/*
+- (void)layout {
+    [super layout];
+    
+    NSView *view = _contentView.documentView;
+    CGFloat contentHeight = _top > _contentView.height ? _top : _contentView.height;
+    [view mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(contentHeight);
+    }];
+}
+ */
 + (instancetype)verticalScrollView;
 
 @end
