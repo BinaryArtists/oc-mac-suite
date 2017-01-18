@@ -17,7 +17,7 @@
 @singleton(_Log)
 
 @property (nonatomic, assign) BOOL enabledFileLog; // default NO
-@property (nonatomic, assign) BOOL enabledTTYLog; // default YES
+@property (nonatomic, assign) BOOL enabledTTYLog; // default NO
 @property (nonatomic, assign) BOOL enabledASLLog; // Apple system log, default NO
 /**
  * Visit http://ip:110
