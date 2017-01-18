@@ -29,3 +29,5 @@
 - (BOOL)columnExists:(NSString*)tableName columnName:(NSString*)columnName;
 
 @end
+
+import_category(FMDatabase)

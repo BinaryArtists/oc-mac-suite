@@ -112,3 +112,5 @@ return ret;
 }
 
 @end
+
+def_import_category(FMDatabase)

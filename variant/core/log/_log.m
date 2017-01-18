@@ -30,10 +30,13 @@
     if (self = [super init]) {
         
         {
-            _fileLogger = [DDFileLogger new];
-            _fileLogger.maximumFileSize = 1024 * 1024;    // 1 MB
+            NSString *logFileDirectory = [path_of_cache stringByAppendingPathComponent:@"Logs/"];
+            DDLogFileManagerDefault *ddlogFileManager = [[DDLogFileManagerDefault alloc] initWithLogsDirectory:logFileDirectory];
+            _fileLogger = [[DDFileLogger alloc] initWithLogFileManager:ddlogFileManager];
+            _fileLogger.maximumFileSize = 1024 * 1024 * 10;    // 1 MB
             _fileLogger.rollingFrequency = 60 * 60 * 24; //  24 Hours
             _fileLogger.logFileManager.maximumNumberOfLogFiles = 4;
+            _fileLogger.rollingFrequency = INT_MAX;
             
             _sqliteLogger = [[FMDBLogger alloc] initWithLogDirectory:path_of_cache];
             _sqliteLogger.saveThreshold     = 500;
@@ -58,11 +61,12 @@
             // You can automatically discover the service in Safari's bonjour bookmarks section.
             [_httpServer setType:@"_http._tcp."];
             
-            [_httpServer setPort:110];
+            [_httpServer setPort:10000];
             
             // Serve files from our embedded Web folder
-            NSString *webPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Web"];
-            [_httpServer setDocumentRoot:webPath];
+            NSBundle *variantBundle = [NSBundle bundleWithName:@"variantResource"];
+//            NSString *webPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Web"];
+            [_httpServer setDocumentRoot:variantBundle.resourcePath];
         }
     }
     
@@ -76,6 +80,8 @@
     
     if (enabledFileLog) {
         [DDLog addLogger:_fileLogger];
+        
+        logd(@"file log at directory = %@", _fileLogger.logFileManager.logsDirectory);
     } else {
         [DDLog removeLogger:_fileLogger];
     }
@@ -112,7 +118,7 @@
         // Start the server (and check for problems)
         NSError *error = nil;
         if (![_httpServer start:&error]) {
-            DDLogError(@"Error starting HTTP Server: %@", error);
+            loge(@"Error starting HTTP Server: %@", error);
         }
     } else {
         // won't touch FileLog switch

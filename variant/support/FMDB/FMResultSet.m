@@ -103,7 +103,7 @@
         return [dict copy];
     }
     else {
-        LOG(@"Warning: There seem to be no columns in this set.");
+        loge(@"Warning: There seem to be no columns in this set.");
     }
     
     return nil;
@@ -126,15 +126,15 @@
             if (SQLITE_LOCKED == rc) {
                 rc = sqlite3_reset(statement.statement);
                 if (rc != SQLITE_LOCKED) {
-                    LOG(@"Unexpected result from sqlite3_reset (%d) rs", rc);
+                    loge(@"Unexpected result from sqlite3_reset (%d) rs", rc);
                 }
             }
             usleep(20);
             
             if ([parentDB busyRetryTimeout] && (numberOfRetries++ > [parentDB busyRetryTimeout])) {
                 
-                LOG(@"%s:%d Database busy (%@)", __FUNCTION__, __LINE__, [parentDB databasePath]);
-                LOG(@"Database busy");
+                loge(@"%s:%d Database busy (%@)", __FUNCTION__, __LINE__, [parentDB databasePath]);
+                loge(@"Database busy");
                 break;
             }
         }
@@ -142,17 +142,17 @@
             // all is well, let's return.
         }
         else if (SQLITE_ERROR == rc) {
-            LOG(@"Error calling sqlite3_step (%d: %s) rs", rc, sqlite3_errmsg([parentDB sqliteHandle]));
+            loge(@"Error calling sqlite3_step (%d: %s) rs", rc, sqlite3_errmsg([parentDB sqliteHandle]));
             break;
         } 
         else if (SQLITE_MISUSE == rc) {
             // uh oh.
-            LOG(@"Error calling sqlite3_step (%d: %s) rs", rc, sqlite3_errmsg([parentDB sqliteHandle]));
+            loge(@"Error calling sqlite3_step (%d: %s) rs", rc, sqlite3_errmsg([parentDB sqliteHandle]));
             break;
         }
         else {
             // wtf?
-            LOG(@"Unknown error calling sqlite3_step (%d: %s) rs", rc, sqlite3_errmsg([parentDB sqliteHandle]));
+            loge(@"Unknown error calling sqlite3_step (%d: %s) rs", rc, sqlite3_errmsg([parentDB sqliteHandle]));
             break;
         }
         
@@ -184,7 +184,7 @@
         return [n intValue];
     }
     
-    LOG(@"Warning: I could not find the column named '%@'.", columnName);
+    loge(@"Warning: I could not find the column named '%@'.", columnName);
     
     return -1;
 }

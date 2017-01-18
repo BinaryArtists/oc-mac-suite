@@ -95,15 +95,6 @@ static inline BOOL is_empty(id thing) {
 
 // Debug
 
-#ifdef DEBUG
-
-#   define LOG( s, ... ) do {fprintf(stderr,"%s, %d, %s\n", [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:(s), ##__VA_ARGS__] UTF8String]);}while(0);
-
-#else
-
-#   define LOG( s, ... )
-
-#endif
 
 // Types
 

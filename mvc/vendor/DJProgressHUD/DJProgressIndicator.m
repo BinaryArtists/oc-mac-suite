@@ -42,11 +42,8 @@
     return self;
 }
 
-- (void)drawRect:(NSRect)dirtyRect
-{
+- (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
-    
-    //NSLog(@"Drawing");
     
     [self setBackground];
     
@@ -84,9 +81,6 @@
 }
 
 - (void)showProgress:(float)progress {
-
-    NSLog(@"-----%f",progress);
-
     _currentProgress = progress;
     
     [self updateLayout];

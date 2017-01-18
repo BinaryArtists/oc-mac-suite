@@ -86,3 +86,5 @@
 }
 
 @end
+
+def_import_category(DDNumber)

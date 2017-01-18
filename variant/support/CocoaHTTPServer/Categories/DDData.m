@@ -156,3 +156,5 @@ static char encodingTable[64] = {
 }
 
 @end
+
+def_import_category(DDData)

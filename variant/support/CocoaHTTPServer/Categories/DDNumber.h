@@ -10,3 +10,5 @@
 + (BOOL)parseString:(NSString *)str intoNSUInteger:(NSUInteger *)pNum;
 
 @end
+
+import_category(DDNumber)

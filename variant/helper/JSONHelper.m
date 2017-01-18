@@ -21,7 +21,7 @@
     NSString *jsonString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
     
     if (error) {
-        LOG(@"json string error = %@", error);
+        loge(@"json string error = %@", error);
         
         return nil;
     }
@@ -31,7 +31,7 @@
                                                         options:NSJSONReadingMutableContainers
                                                           error:&error];
     if(error) {
-        LOG(@"json解析失败：%@", error);
+        loge(@"json解析失败：%@", error);
         
         return nil;
     }
@@ -45,7 +45,7 @@
                                                                    options:NSJSONReadingMutableContainers
                                                                      error:&error];
     if(error) {
-        LOG(@"json解析失败：%@", error);
+        loge(@"json解析失败：%@", error);
         
         return nil;
     }

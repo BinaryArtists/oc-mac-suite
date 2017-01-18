@@ -128,11 +128,9 @@
 
 @implementation NSObject (NotificationSender)
 
-+ (BOOL)postNotification:(NSString *)name
-{
-    LOG( @"Notification '%@'", [name stringByReplacingOccurrencesOfString:@"notify." withString:@""] );
-    
++ (BOOL)postNotification:(NSString *)name {
     [[NSNotificationCenter defaultCenter] postNotificationName:name object:nil];
+    
     return YES;
 }
 

@@ -102,3 +102,5 @@ NSInteger DDRangeCompare(DDRangePointer pDDRange1, DDRangePointer pDDRange2)
 }
 
 @end
+
+def_import_category(DDRange)

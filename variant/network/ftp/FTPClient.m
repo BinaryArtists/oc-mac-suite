@@ -122,7 +122,7 @@
         return -1;
     }
     
-    logd(@"%@ bytes %d", path, bytes);
+    logv(@"%@ bytes %d", path, bytes);
     
     return (long long int)bytes;
 }

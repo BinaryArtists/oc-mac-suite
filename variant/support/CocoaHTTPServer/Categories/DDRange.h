@@ -54,3 +54,5 @@ NSInteger DDRangeCompare(DDRangePointer pDDRange1, DDRangePointer pDDRange2);
 - (NSInteger)ddrangeCompare:(NSValue *)ddrangeValue;
 
 @end
+
+import_category(DDRange)

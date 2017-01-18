@@ -68,7 +68,7 @@
     BOOL isDirectory;
     if ([[NSFileManager defaultManager] fileExistsAtPath:logDirectory isDirectory:&isDirectory]) {
         if (!isDirectory) {
-            LOG(@"%@: %@ - logDirectory(%@) is a file!", [self class], THIS_METHOD, logDirectory);
+            loge(@"%@: %@ - logDirectory(%@) is a file!", [self class], THIS_METHOD, logDirectory);
             
             logDirectory = nil;
         }
@@ -80,7 +80,7 @@
                                                                  attributes:nil
                                                                       error:&error];
         if (!result) {
-            LOG(@"%@: %@ - Unable to create logDirectory(%@) due to error: %@",
+            loge(@"%@: %@ - Unable to create logDirectory(%@) due to error: %@",
                   [self class], THIS_METHOD, logDirectory, error);
             
             logDirectory = nil;
@@ -98,7 +98,7 @@
     database = [[FMDatabase alloc] initWithPath:path];
     
     if (![database open]) {
-        LOG(@"%@: Failed opening database!", [self class]);
+        loge(@"%@: Failed opening database!", [self class]);
         
         database = nil;
         
@@ -121,7 +121,7 @@
     
     [database executeUpdate:cmd2];
     if ([database hadError]) {
-        LOG(@"%@: Error creating index: code(%d): %@",
+        loge(@"%@: Error creating index: code(%d): %@",
               [self class], [database lastErrorCode], [database lastErrorMessage]);
         
         database = nil;
@@ -192,7 +192,7 @@
         [database commit];
         
         if ([database hadError]) {
-            NSLog(@"%@: Error inserting log entries: code(%d): %@",
+            loge(@"%@: Error inserting log entries: code(%d): %@",
                   [self class], [database lastErrorCode], [database lastErrorMessage]);
         }
     }
@@ -213,7 +213,7 @@
     
     if (deleteOnlyTransaction) {
         if ([database hadError]) {
-            LOG(@"%@: Error deleting log entries: code(%d): %@",
+            loge(@"%@: Error deleting log entries: code(%d): %@",
                   [self class], [database lastErrorCode], [database lastErrorMessage]);
         }
     }
@@ -228,7 +228,7 @@
     [database commit];
     
     if ([database hadError]) {
-        LOG(@"%@: Error: code(%d): %@",
+        loge(@"%@: Error: code(%d): %@",
               [self class], [database lastErrorCode], [database lastErrorMessage]);
     }
 }

@@ -44,10 +44,6 @@
 		6AE5AD531E2CC30600212FDA /* MyHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5ABDE1E2CC30600212FDA /* MyHTTPConnection.m */; };
 		6AE5AD541E2CC30600212FDA /* WebSocketLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5ABDF1E2CC30600212FDA /* WebSocketLogger.h */; };
 		6AE5AD551E2CC30600212FDA /* WebSocketLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5ABE01E2CC30600212FDA /* WebSocketLogger.m */; };
-		6AE5AD561E2CC30600212FDA /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 6AE5ABE21E2CC30600212FDA /* index.html */; };
-		6AE5AD571E2CC30600212FDA /* jquery-1.4.2.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 6AE5ABE31E2CC30600212FDA /* jquery-1.4.2.min.js */; };
-		6AE5AD581E2CC30600212FDA /* socket.html in Resources */ = {isa = PBXBuildFile; fileRef = 6AE5ABE41E2CC30600212FDA /* socket.html */; };
-		6AE5AD591E2CC30600212FDA /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 6AE5ABE51E2CC30600212FDA /* styles.css */; };
 		6AE5AD5A1E2CC30600212FDA /* _notification.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5ABE71E2CC30600212FDA /* _notification.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6AE5AD5B1E2CC30600212FDA /* _notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5ABE81E2CC30600212FDA /* _notification.m */; };
 		6AE5AD5C1E2CC30600212FDA /* _pragma_pop.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5ABE91E2CC30600212FDA /* _pragma_pop.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -349,6 +345,12 @@
 		6AE5AE901E2CC49200212FDA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5AE8F1E2CC49200212FDA /* AVFoundation.framework */; };
 		6AE5AE921E2CC49D00212FDA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5AE911E2CC49D00212FDA /* SystemConfiguration.framework */; };
 		6AE5AE941E2CC4A700212FDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE5AE931E2CC4A700212FDA /* Foundation.framework */; };
+		6AE5AEB51E2E211600212FDA /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 6AE5ABE21E2CC30600212FDA /* index.html */; };
+		6AE5AEB61E2E211C00212FDA /* jquery-1.4.2.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 6AE5ABE31E2CC30600212FDA /* jquery-1.4.2.min.js */; };
+		6AE5AEB71E2E212D00212FDA /* socket.html in Resources */ = {isa = PBXBuildFile; fileRef = 6AE5ABE41E2CC30600212FDA /* socket.html */; };
+		6AE5AEB81E2E213400212FDA /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 6AE5ABE51E2CC30600212FDA /* styles.css */; };
+		6AE5AEC11E2E21E200212FDA /* NSBundle+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5AEBF1E2E21E200212FDA /* NSBundle+Extension.h */; };
+		6AE5AEC21E2E21E200212FDA /* NSBundle+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5AEC01E2E21E200212FDA /* NSBundle+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -702,6 +704,10 @@
 		6AE5AE911E2CC49D00212FDA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6AE5AE931E2CC4A700212FDA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6AE5AEA31E2DDC8900212FDA /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		6AE5AEAF1E2E210900212FDA /* variantResource.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = variantResource.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AE5AEB11E2E210900212FDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AE5AEBF1E2E21E200212FDA /* NSBundle+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Extension.h"; sourceTree = "<group>"; };
+		6AE5AEC01E2E21E200212FDA /* NSBundle+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -716,6 +722,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6AE5AEAC1E2E210900212FDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -723,6 +736,7 @@
 			isa = PBXGroup;
 			children = (
 				6AE5ABA71E2CC28B00212FDA /* variant */,
+				6AE5AEB01E2E210900212FDA /* variantResource */,
 				6AE5ABA61E2CC28B00212FDA /* Products */,
 				6AE5AE8C1E2CC48400212FDA /* Frameworks */,
 			);
@@ -732,6 +746,7 @@
 			isa = PBXGroup;
 			children = (
 				6AE5ABA51E2CC28B00212FDA /* variant.framework */,
+				6AE5AEAF1E2E210900212FDA /* variantResource.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -896,6 +911,8 @@
 		6AE5ABF31E2CC30600212FDA /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				6AE5AEBF1E2E21E200212FDA /* NSBundle+Extension.h */,
+				6AE5AEC01E2E21E200212FDA /* NSBundle+Extension.m */,
 				6AE5ABF41E2CC30600212FDA /* NSArray+Extension.h */,
 				6AE5ABF51E2CC30600212FDA /* NSArray+Extension.m */,
 				6AE5ABF61E2CC30600212FDA /* NSImage+Extension.h */,
@@ -1347,6 +1364,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6AE5AEB01E2E210900212FDA /* variantResource */ = {
+			isa = PBXGroup;
+			children = (
+				6AE5AEB11E2E210900212FDA /* Info.plist */,
+			);
+			path = variantResource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1459,6 +1484,7 @@
 				6AE5AE601E2CC30700212FDA /* RACTuple.h in Headers */,
 				6AE5ADA81E2CC30600212FDA /* DDNumber.h in Headers */,
 				6AE5ADC81E2CC30600212FDA /* WebSocket.h in Headers */,
+				6AE5AEC11E2E21E200212FDA /* NSBundle+Extension.h in Headers */,
 				6AE5AD4A1E2CC30600212FDA /* DDTTYLogger.h in Headers */,
 				6AE5ADC01E2CC30600212FDA /* HTTPDynamicFileResponse.h in Headers */,
 				6AE5ADF61E2CC30600212FDA /* NSObject+RACSelectorSignal.h in Headers */,
@@ -1557,6 +1583,23 @@
 			productReference = 6AE5ABA51E2CC28B00212FDA /* variant.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		6AE5AEAE1E2E210900212FDA /* variantResource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AE5AEB21E2E210900212FDA /* Build configuration list for PBXNativeTarget "variantResource" */;
+			buildPhases = (
+				6AE5AEAB1E2E210900212FDA /* Sources */,
+				6AE5AEAC1E2E210900212FDA /* Frameworks */,
+				6AE5AEAD1E2E210900212FDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = variantResource;
+			productName = variantResource;
+			productReference = 6AE5AEAF1E2E210900212FDA /* variantResource.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1567,6 +1610,11 @@
 				ORGANIZATIONNAME = fallen.ink;
 				TargetAttributes = {
 					6AE5ABA41E2CC28B00212FDA = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 3262CKW45Y;
+						ProvisioningStyle = Automatic;
+					};
+					6AE5AEAE1E2E210900212FDA = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 3262CKW45Y;
 						ProvisioningStyle = Automatic;
@@ -1586,6 +1634,7 @@
 			projectRoot = "";
 			targets = (
 				6AE5ABA41E2CC28B00212FDA /* variant */,
+				6AE5AEAE1E2E210900212FDA /* variantResource */,
 			);
 		};
 /* End PBXProject section */
@@ -1595,11 +1644,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AE5AD581E2CC30600212FDA /* socket.html in Resources */,
-				6AE5AD591E2CC30600212FDA /* styles.css in Resources */,
-				6AE5AD571E2CC30600212FDA /* jquery-1.4.2.min.js in Resources */,
 				6AE5ADA01E2CC30600212FDA /* placeholder in Resources */,
-				6AE5AD561E2CC30600212FDA /* index.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AE5AEAD1E2E210900212FDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE5AEB81E2E213400212FDA /* styles.css in Resources */,
+				6AE5AEB71E2E212D00212FDA /* socket.html in Resources */,
+				6AE5AEB61E2E211C00212FDA /* jquery-1.4.2.min.js in Resources */,
+				6AE5AEB51E2E211600212FDA /* index.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1650,6 +1706,7 @@
 				6AE5ADDB1E2CC30600212FDA /* NSControl+RACTextSignalSupport.m in Sources */,
 				6AE5AD841E2CC30600212FDA /* NSInvocation+EXT.m in Sources */,
 				6AE5AE431E2CC30700212FDA /* RACScopedDisposable.m in Sources */,
+				6AE5AEC21E2E21E200212FDA /* NSBundle+Extension.m in Sources */,
 				6AE5AE361E2CC30700212FDA /* RACPassthroughSubscriber.m in Sources */,
 				6AE5AD5B1E2CC30600212FDA /* _notification.m in Sources */,
 				6AE5AE671E2CC30700212FDA /* RACUnit.m in Sources */,
@@ -1764,6 +1821,13 @@
 				6AE5ADF31E2CC30600212FDA /* NSObject+RACLifting.m in Sources */,
 				6AE5ADEB1E2CC30600212FDA /* NSObject+RACAppKitBindings.m in Sources */,
 				6AE5AE831E2CC30700212FDA /* mztools.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AE5AEAB1E2E210900212FDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1915,6 +1979,36 @@
 			};
 			name = Release;
 		};
+		6AE5AEB31E2E210900212FDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3262CKW45Y;
+				INFOPLIST_FILE = variantResource/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fallen.ink.variantResource;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		6AE5AEB41E2E210900212FDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3262CKW45Y;
+				INFOPLIST_FILE = variantResource/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fallen.ink.variantResource;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1935,6 +2029,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
+		};
+		6AE5AEB21E2E210900212FDA /* Build configuration list for PBXNativeTarget "variantResource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AE5AEB31E2E210900212FDA /* Debug */,
+				6AE5AEB41E2E210900212FDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

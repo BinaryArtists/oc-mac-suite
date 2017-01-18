@@ -12,3 +12,5 @@
 - (NSData *)base64Decoded;
 
 @end
+
+import_category(DDData)

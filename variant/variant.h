@@ -33,11 +33,12 @@ FOUNDATION_EXPORT const unsigned char variantVersionString[];
 // foundation
 #import <foundation/extobjc/extobjc.h>
 
-#import "foundation/extension/NSObject+Extension.h"
-#import "foundation/extension/NSString+Extension.h"
-#import "foundation/extension/NSWorkspace+Extension.h"
-#import "foundation/extension/NSArray+Extension.h"
-#import "foundation/extension/NSImage+Extension.h"
+#import <foundation/extension/NSObject+Extension.h>
+#import <foundation/extension/NSString+Extension.h>
+#import <foundation/extension/NSWorkspace+Extension.h>
+#import <foundation/extension/NSArray+Extension.h>
+#import <foundation/extension/NSImage+Extension.h>
+#import <foundation/extension/NSBundle+Extension.h>
 
 #import <foundation/_runtime.h>
 #import <foundation/_singleton.h>
@@ -62,7 +63,38 @@ FOUNDATION_EXPORT const unsigned char variantVersionString[];
 
 // core
 #import <core/core.h>
+#import <core/log/LumberJack/CocoaLumberjack.h>
 #import <core/log/_log.h>
+
+// category import
+// Use like this
+//      #pragma clang diagnostic push
+//      #pragma clang diagnostic ignored "-Wimplicit-function-declaration"
+
+//      import_all_category
+
+//      #pragma clang diagnostic pop
+#define import_all_category \
+__attribute__((used)) static void importCategories () { \
+    import_NSString_compression(); \
+    import_NSObject_compression(); \
+    import_NSWorkspace_compression(); \
+    import_NSArray_compression(); \
+    import__Notification_compression(); \
+    import_NSView_compression(); \
+    import_NSScrollView_compression(); \
+    import_NSImage_compression(); \
+    import_NSTextField_compression(); \
+    import_Property_compression(); \
+    import_NSBundle_compression(); \
+    import_DDData_compression(); \
+    import_DDNumber_compression(); \
+    import_DDRange_compression(); \
+    import_FMDatabase_compression(); \
+ \
+    import_NSError_FTPKitAdditions_compression(); \
+    import_NSString_FTPKitAdditions_compression(); \
+}
 
 // 一个简易的Mac开发教程：http://www.jianshu.com/p/feadeb1ae7ae
 

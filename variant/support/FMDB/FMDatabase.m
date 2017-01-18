@@ -50,7 +50,7 @@
     
     int err = sqlite3_open((databasePath ? [databasePath fileSystemRepresentation] : ":memory:"), &db );
     if(err != SQLITE_OK) {
-        LOG(@"error opening!: %d", err);
+        loge(@"error opening!: %d", err);
         return NO;
     }
     
@@ -61,7 +61,7 @@
 - (BOOL)openWithFlags:(int)flags {
     int err = sqlite3_open_v2((databasePath ? [databasePath fileSystemRepresentation] : ":memory:"), &db, flags, NULL /* Name of VFS module to use */);
     if(err != SQLITE_OK) {
-        LOG(@"error opening!: %d", err);
+        loge(@"error opening!: %d", err);
         return NO;
     }
     return YES;
@@ -88,13 +88,13 @@
             retry = YES;
             usleep(20);
             if (busyRetryTimeout && (numberOfRetries++ > busyRetryTimeout)) {
-                LOG(@"%s:%d", __FUNCTION__, __LINE__);
-                LOG(@"Database busy, unable to close");
+                loge(@"%s:%d", __FUNCTION__, __LINE__);
+                loge(@"Database busy, unable to close");
                 return NO;
             }
         }
         else if (SQLITE_OK != rc) {
-            LOG(@"error closing!: %d", rc);
+            loge(@"error closing!: %d", rc);
         }
     }
     while (retry);
@@ -160,8 +160,8 @@
     int rc = sqlite3_rekey(db, [key UTF8String], strlen([key UTF8String]));
     
     if (rc != SQLITE_OK) {
-        LOG(@"error on rekey: %d", rc);
-        LOG(@"%@", [self lastErrorMessage]);
+        loge(@"error on rekey: %d", rc);
+        loge(@"%@", [self lastErrorMessage]);
     }
     
     return (rc == SQLITE_OK);
@@ -201,7 +201,7 @@
 }
 
 - (void)compainAboutInUse {
-    LOG(@"The FMDatabase %@ is currently in use.", self);
+    logd(@"The FMDatabase %@ is currently in use.", self);
     
 #ifndef NS_BLOCK_ASSERTIONS
     if (crashOnErrors) {
@@ -305,12 +305,12 @@
     
     FMResultSet *rs = nil;
     
-    int rc                  = 0x00;;
-    sqlite3_stmt *pStmt     = 0x00;;
+    int rc                  = 0x00;
+    sqlite3_stmt *pStmt     = 0x00;
     FMStatement *statement  = 0x00;
     
     if (traceExecution && sql) {
-        LOG(@"%@ executeQuery: %@", self, sql);
+        logd(@"%@ executeQuery: %@", self, sql);
     }
     
     if (shouldCacheStatements) {
@@ -331,8 +331,8 @@
                 usleep(20);
                 
                 if (busyRetryTimeout && (numberOfRetries++ > busyRetryTimeout)) {
-                    LOG(@"%s:%d Database busy (%@)", __FUNCTION__, __LINE__, [self databasePath]);
-                    LOG(@"Database busy");
+                    loge(@"%s:%d Database busy (%@)", __FUNCTION__, __LINE__, [self databasePath]);
+                    loge(@"Database busy");
                     sqlite3_finalize(pStmt);
                     [self setInUse:NO];
                     return nil;
@@ -342,8 +342,8 @@
                 
                 
                 if (logsErrors) {
-                    LOG(@"DB Error: %d \"%@\"", [self lastErrorCode], [self lastErrorMessage]);
-                    LOG(@"DB Query: %@", sql);
+                    loge(@"DB Error: %d \"%@\"", [self lastErrorCode], [self lastErrorMessage]);
+                    loge(@"DB Query: %@", sql);
 #ifndef NS_BLOCK_ASSERTIONS
                     if (crashOnErrors) {
                         NSAssert2(false, @"DB Error: %d \"%@\"", [self lastErrorCode], [self lastErrorMessage]);
@@ -374,7 +374,7 @@
         }
         
         if (traceExecution) {
-            LOG(@"obj: %@", obj);
+            loge(@"obj: %@", obj);
         }
         
         idx++;
@@ -383,7 +383,7 @@
     }
     
     if (idx != queryCount) {
-        LOG(@"Error: the bind count is not correct for the # of variables (executeQuery)");
+        loge(@"Error: the bind count is not correct for the # of variables (executeQuery)");
         sqlite3_finalize(pStmt);
         [self setInUse:NO];
         return nil;
@@ -441,7 +441,7 @@
     FMStatement *cachedStmt = 0x00;
     
     if (traceExecution && sql) {
-        LOG(@"%@ executeUpdate: %@", self, sql);
+        loge(@"%@ executeUpdate: %@", self, sql);
     }
     
     if (shouldCacheStatements) {
@@ -462,8 +462,8 @@
                 usleep(20);
                 
                 if (busyRetryTimeout && (numberOfRetries++ > busyRetryTimeout)) {
-                    LOG(@"%s:%d Database busy (%@)", __FUNCTION__, __LINE__, [self databasePath]);
-                    LOG(@"Database busy");
+                    loge(@"%s:%d Database busy (%@)", __FUNCTION__, __LINE__, [self databasePath]);
+                    loge(@"Database busy");
                     sqlite3_finalize(pStmt);
                     [self setInUse:NO];
                     return NO;
@@ -473,8 +473,8 @@
                 
                 
                 if (logsErrors) {
-                    LOG(@"DB Error: %d \"%@\"", [self lastErrorCode], [self lastErrorMessage]);
-                    LOG(@"DB Query: %@", sql);
+                    loge(@"DB Error: %d \"%@\"", [self lastErrorCode], [self lastErrorMessage]);
+                    loge(@"DB Query: %@", sql);
 #ifndef NS_BLOCK_ASSERTIONS
                     if (crashOnErrors) {
                         NSAssert2(false, @"DB Error: %d \"%@\"", [self lastErrorCode], [self lastErrorMessage]);
@@ -511,7 +511,7 @@
         
         
         if (traceExecution) {
-            LOG(@"obj: %@", obj);
+            logd(@"obj: %@", obj);
         }
         
         idx++;
@@ -520,7 +520,7 @@
     }
     
     if (idx != queryCount) {
-        LOG(@"Error: the bind count is not correct for the # of variables (%@) (executeUpdate)", sql);
+        loge(@"Error: the bind count is not correct for the # of variables (%@) (executeUpdate)", sql);
         sqlite3_finalize(pStmt);
         [self setInUse:NO];
         return NO;
@@ -541,14 +541,14 @@
             if (SQLITE_LOCKED == rc) {
                 rc = sqlite3_reset(pStmt);
                 if (rc != SQLITE_LOCKED) {
-                    LOG(@"Unexpected result from sqlite3_reset (%d) eu", rc);
+                    loge(@"Unexpected result from sqlite3_reset (%d) eu", rc);
                 }
             }
             usleep(20);
             
             if (busyRetryTimeout && (numberOfRetries++ > busyRetryTimeout)) {
-                LOG(@"%s:%d Database busy (%@)", __FUNCTION__, __LINE__, [self databasePath]);
-                LOG(@"Database busy");
+                loge(@"%s:%d Database busy (%@)", __FUNCTION__, __LINE__, [self databasePath]);
+                loge(@"Database busy");
                 retry = NO;
             }
         }
@@ -556,18 +556,18 @@
             // all is well, let's return.
         }
         else if (SQLITE_ERROR == rc) {
-            LOG(@"Error calling sqlite3_step (%d: %s) SQLITE_ERROR", rc, sqlite3_errmsg(db));
-            LOG(@"DB Query: %@", sql);
+            loge(@"Error calling sqlite3_step (%d: %s) SQLITE_ERROR", rc, sqlite3_errmsg(db));
+            loge(@"DB Query: %@", sql);
         }
         else if (SQLITE_MISUSE == rc) {
             // uh oh.
-            LOG(@"Error calling sqlite3_step (%d: %s) SQLITE_MISUSE", rc, sqlite3_errmsg(db));
-            LOG(@"DB Query: %@", sql);
+            loge(@"Error calling sqlite3_step (%d: %s) SQLITE_MISUSE", rc, sqlite3_errmsg(db));
+            loge(@"DB Query: %@", sql);
         }
         else {
             // wtf?
-            LOG(@"Unknown error calling sqlite3_step (%d: %s) eu", rc, sqlite3_errmsg(db));
-            LOG(@"DB Query: %@", sql);
+            loge(@"Unknown error calling sqlite3_step (%d: %s) eu", rc, sqlite3_errmsg(db));
+            loge(@"DB Query: %@", sql);
         }
         
     } while (retry);
