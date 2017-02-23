@@ -20,3 +20,7 @@ email me: fengzilijie@qq.com
 ## Others
 
 As i import many opensource, so this project is free to use.
+
+### Reminding myself
+
+1. Use FMDatabase if needed.
