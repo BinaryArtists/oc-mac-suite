@@ -153,6 +153,8 @@ static NSString * _defaultWindowTitle_ = @"test";
                     break;
             }
             
+            logd(@"new frame = %@", NSStringFromRect(newFrame));
+            
             [self.window setFrame:newFrame display:YES animate:NO];
             
             _isRelocated = YES;
