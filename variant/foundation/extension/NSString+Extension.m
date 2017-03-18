@@ -52,6 +52,11 @@
     return [[NSString alloc] initWithBytes:data length:32 encoding:NSUTF8StringEncoding];
 }
 
+- (BOOL)contains:(NSString*) str {
+    NSRange range = [self rangeOfString:str];
+    return (range.location != NSNotFound);
+}
+
 @end
 
 def_import_category(NSString)

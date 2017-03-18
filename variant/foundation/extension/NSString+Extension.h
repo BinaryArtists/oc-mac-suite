@@ -21,6 +21,8 @@
 // generate 32 bytes randomly string.
 + (NSString *)random32;
 
+- (BOOL)contains:(NSString *)str;
+
 @end
 
 import_category(NSString)
