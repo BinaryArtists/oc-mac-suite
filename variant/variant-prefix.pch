@@ -8,6 +8,70 @@
 
 #ifdef __OBJC__
 
+//#import "variant-availability.h"
+
+#define TESTING_COMPILATION_TARGET
+// only enable when trying to diagnose what APIs are being inappropriately used
+#ifdef TESTING_COMPILATION_TARGET
+#import <Availability.h>
+
+#define __MYUNSUPPORTED __attribute((deprecated("API version unsupported")))
+//#define __MAC_10_0            1000
+//#define __MAC_10_1            1010
+//#define __MAC_10_2            1020
+//#define __MAC_10_3            1030
+//#define __MAC_10_4            1040
+//#define __MAC_10_5            1050
+//#define __MAC_10_6            1060
+//#define __MAC_10_7            1070
+//#define __MAC_10_8            1080
+//#define __MAC_10_9            1090
+//#define __MAC_10_10         101000
+//#define __MAC_10_10_2       101002
+//#define __MAC_10_10_3       101003
+//#define __MAC_10_11         101100
+//#define __MAC_10_11_2       101102
+//#define __MAC_10_11_3       101103
+//#define __MAC_10_11_4       101104
+//#define __MAC_10_12         101200
+
+#define __MYUNSUPPORTED_MAC_NA __MYUNSUPPORTED
+#define __MYUNSUPPORTED_MAC_10_0
+#define __MYUNSUPPORTED_MAC_10_1
+#define __MYUNSUPPORTED_MAC_10_2
+#define __MYUNSUPPORTED_MAC_10_3
+#define __MYUNSUPPORTED_MAC_10_4
+#define __MYUNSUPPORTED_MAC_10_5
+#define __MYUNSUPPORTED_MAC_10_6
+#define __MYUNSUPPORTED_MAC_10_7
+#define __MYUNSUPPORTED_MAC_10_8
+#define __MYUNSUPPORTED_MAC_10_9  __MYUNSUPPORTED
+#define __MYUNSUPPORTED_MAC_10_10 __MYUNSUPPORTED
+#define __MYUNSUPPORTED_MAC_10_10_2 __MYUNSUPPORTED
+#define __MYUNSUPPORTED_MAC_10_10_3 __MYUNSUPPORTED
+#define __MYUNSUPPORTED_MAC_10_11 __MYUNSUPPORTED
+#define __MYUNSUPPORTED_MAC_10_11_2 __MYUNSUPPORTED
+#define __MYUNSUPPORTED_MAC_10_11_3 __MYUNSUPPORTED
+#define __MYUNSUPPORTED_MAC_10_11_4 __MYUNSUPPORTED
+#define __MYUNSUPPORTED_MAC_10_12 __MYUNSUPPORTED
+#define __MYUNSUPPORTED_MAC_12_0 __MYUNSUPPORTED
+
+//
+
+#undef CF_AVAILABLE
+#define CF_AVAILABLE(_mac, _ios) __MYUNSUPPORTED_MAC_##_mac
+
+#undef NS_AVAILABLE
+#define NS_AVAILABLE(_mac, _ios) __MYUNSUPPORTED_MAC_##_mac
+
+//#undef CF_AVAILABLE_IOS
+//#define CF_AVAILABLE_IOS(_ios) __MYUNSUPPORTED_MAC_##_ios
+//
+//#undef NS_AVAILABLE_IOS
+//#define NS_AVAILABLE_IOS(_ios) __MYUNSUPPORTED_IOS_##_ios
+
+#endif // testing
+
 #import "variant-macros.h"
 
 // foundation

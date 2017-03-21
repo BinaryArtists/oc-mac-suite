@@ -48,7 +48,8 @@
     BOOL		aSuccess;
     NSArray *	anObjectList = nil;
     NSNib *		aNib = [[NSNib alloc] initWithNibNamed:theNibName bundle:theBundle];
-    aSuccess = [aNib instantiateNibWithOwner:self topLevelObjects:&anObjectList];
+    aSuccess = [aNib instantiateWithOwner:self topLevelObjects:&anObjectList];
+//    aSuccess = [aNib instantiateNibWithOwner:self topLevelObjects:&anObjectList]; // 10.8 后已经废弃
     if(aSuccess) {
         int i;
         for(i = 0; i < [anObjectList count]; i++)

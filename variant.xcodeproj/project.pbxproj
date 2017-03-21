@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6AC47F1A1E816E2800F18E88 /* variant-availability.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AC47F191E816E2800F18E88 /* variant-availability.h */; };
+		6AC47F211E818E0600F18E88 /* UncaughtExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AC47F1F1E818E0600F18E88 /* UncaughtExceptionHandler.h */; };
+		6AC47F221E818E0600F18E88 /* UncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AC47F201E818E0600F18E88 /* UncaughtExceptionHandler.m */; };
 		6AE5ABAA1E2CC28B00212FDA /* variant.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5ABA81E2CC28B00212FDA /* variant.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6AE5AD311E2CC30600212FDA /* SHSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE5ABB41E2CC30600212FDA /* SHSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6AE5AD321E2CC30600212FDA /* SHSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE5ABB51E2CC30600212FDA /* SHSystem.m */; };
@@ -354,6 +357,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6AC47F191E816E2800F18E88 /* variant-availability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "variant-availability.h"; sourceTree = "<group>"; };
+		6AC47F1F1E818E0600F18E88 /* UncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		6AC47F201E818E0600F18E88 /* UncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UncaughtExceptionHandler.m; sourceTree = "<group>"; };
 		6AE5ABA51E2CC28B00212FDA /* variant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = variant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE5ABA81E2CC28B00212FDA /* variant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = variant.h; sourceTree = "<group>"; };
 		6AE5ABA91E2CC28B00212FDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -754,6 +760,7 @@
 		6AE5ABA71E2CC28B00212FDA /* variant */ = {
 			isa = PBXGroup;
 			children = (
+				6AC47F191E816E2800F18E88 /* variant-availability.h */,
 				6AE5ABB01E2CC30600212FDA /* application */,
 				6AE5ABB61E2CC30600212FDA /* core */,
 				6AE5ABE61E2CC30600212FDA /* foundation */,
@@ -904,6 +911,8 @@
 				6AE5ABF21E2CC30600212FDA /* _thread.m */,
 				6AE5ABF31E2CC30600212FDA /* extension */,
 				6AE5ABFE1E2CC30600212FDA /* extobjc */,
+				6AC47F1F1E818E0600F18E88 /* UncaughtExceptionHandler.h */,
+				6AC47F201E818E0600F18E88 /* UncaughtExceptionHandler.m */,
 			);
 			path = foundation;
 			sourceTree = "<group>";
@@ -1503,6 +1512,7 @@
 				6AE5ADCA1E2CC30600212FDA /* Event.h in Headers */,
 				6AE5AE6B1E2CC30700212FDA /* aes.h in Headers */,
 				6AE5AD721E2CC30600212FDA /* EXTConcreteProtocol.h in Headers */,
+				6AC47F1A1E816E2800F18E88 /* variant-availability.h in Headers */,
 				6AE5AD391E2CC30600212FDA /* CLIColor.h in Headers */,
 				6AE5AD751E2CC30600212FDA /* EXTKeyPathCoding.h in Headers */,
 				6AE5AE711E2CC30700212FDA /* aestab.h in Headers */,
@@ -1540,6 +1550,7 @@
 				6AE5AD921E2CC30600212FDA /* NSString+Additions.h in Headers */,
 				6AE5AE041E2CC30600212FDA /* NSURLConnection+RACSupport.h in Headers */,
 				6AE5AE4A1E2CC30700212FDA /* RACSignal.h in Headers */,
+				6AC47F211E818E0600F18E88 /* UncaughtExceptionHandler.h in Headers */,
 				6AE5ADE21E2CC30600212FDA /* NSFileHandle+RACSupport.h in Headers */,
 				6AE5AD451E2CC30600212FDA /* DDLegacyMacros.h in Headers */,
 				6AE5AE791E2CC30700212FDA /* hmac.h in Headers */,
@@ -1671,6 +1682,7 @@
 				6AE5AD481E2CC30600212FDA /* DDLog.m in Sources */,
 				6AE5AE7E1E2CC30700212FDA /* sha1.c in Sources */,
 				6AE5AD6B1E2CC30600212FDA /* NSObject+Extension.m in Sources */,
+				6AC47F221E818E0600F18E88 /* UncaughtExceptionHandler.m in Sources */,
 				6AE5ADCF1E2CC30600212FDA /* FMDatabase.m in Sources */,
 				6AE5AE1D1E2CC30600212FDA /* RACEagerSequence.m in Sources */,
 				6AE5AD551E2CC30600212FDA /* WebSocketLogger.m in Sources */,
@@ -1875,7 +1887,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -1919,7 +1931,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1947,6 +1959,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fallen.ink.variant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1973,6 +1986,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fallen.ink.variant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1986,7 +2000,7 @@
 				DEVELOPMENT_TEAM = 3262CKW45Y;
 				INFOPLIST_FILE = variantResource/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fallen.ink.variantResource;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2001,7 +2015,7 @@
 				DEVELOPMENT_TEAM = 3262CKW45Y;
 				INFOPLIST_FILE = variantResource/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fallen.ink.variantResource;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2037,6 +2051,7 @@
 				6AE5AEB41E2E210900212FDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

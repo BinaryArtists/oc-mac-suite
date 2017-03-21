@@ -37,10 +37,10 @@
         // 如果指定了NSStringDrawingUsesLineFragmentOrigin选项，则该选项被忽略
         // NSStringDrawingUsesFontLeading计算行高时使用行间距。（译者注：字体大小+行间距=行高）
         NSDictionary *attributes = [NSDictionary dictionaryWithObject:self.font forKey:NSFontAttributeName];
-        CGRect rect = [self.text boundingRectWithSize:size
-                                              options:option
-                                           attributes:attributes
-                                              context:nil];
+        
+        TODO("注意：这里用旧API，替换了新的！旧的将在10.11后废弃")
+//        CGRect rect = [self.text boundingRectWithSize:size options:option attributes:attributes context:nil];
+        CGRect rect = [self.text boundingRectWithSize:size options:option attributes:attributes];
         
         textSize = rect.size;
     }
