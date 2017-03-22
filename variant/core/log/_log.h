@@ -20,7 +20,7 @@
 @property (nonatomic, assign) BOOL enabledTTYLog; // default NO
 @property (nonatomic, assign) BOOL enabledASLLog; // Apple system log, default NO
 /**
- * Visit http://ip:110
+ * Visit http://ip:10000
  */
 @property (nonatomic, assign) BOOL enabledWebLog; // default NO
 @property (nonatomic, assign) BOOL enabledDatabaseLog; // default NO

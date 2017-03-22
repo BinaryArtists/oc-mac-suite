@@ -118,7 +118,8 @@
     int stat = FtpSize(cPath, &bytes, FTPLIB_BINARY, conn);
     FtpQuit(conn);
     if (stat == 0) {
-        loge(@"File most likely does not exist %@", path);
+        loge(@"File most likely does not exist %@ on [host:%@, port:%d, username:%@, password:%@]", path,
+             self.credentials.host, self.credentials.port, self.credentials.username, self.credentials.password);
         return -1;
     }
     
