@@ -79,18 +79,20 @@
 }
 
 - (BOOL)openFile:(NSString *)filepath {
-    [[NSWorkspace sharedWorkspace] openFile:@"" withApplication:@""];
     return [[NSWorkspace sharedWorkspace] openFile:filepath];
 }
 
 - (BOOL)closePreview {
     NSBundle *softBundle = [NSBundle bundleWithPath:app_path_preview];
     NSString *bundleID = [softBundle bundleIdentifier];
-    NSArray *array = [NSRunningApplication runningApplicationsWithBundleIdentifier:bundleID];
-    if ([array count] > 0) {
-        NSRunningApplication *runningApp = [array objectAtIndex:0];
-        
-        return [runningApp terminate];
+    
+    if (bundleID) {
+        NSArray *array = [NSRunningApplication runningApplicationsWithBundleIdentifier:bundleID];
+        if ([array count] > 0) {
+            NSRunningApplication *runningApp = [array objectAtIndex:0];
+            
+            return [runningApp terminate];
+        }
     }
     
     return NO;
@@ -99,42 +101,17 @@
 - (BOOL)closeXcode {
     NSBundle *softBundle = [NSBundle bundleWithPath:app_path_xcode];
     NSString *bundleID = [softBundle bundleIdentifier];
-    NSArray *array = [NSRunningApplication runningApplicationsWithBundleIdentifier:bundleID];
-    if ([array count] > 0) {
-        NSRunningApplication *runningApp = [array objectAtIndex:0];
-        
-        return [runningApp terminate];
+    if (bundleID) {
+        NSArray *array = [NSRunningApplication runningApplicationsWithBundleIdentifier:bundleID];
+        if ([array count] > 0) {
+            NSRunningApplication *runningApp = [array objectAtIndex:0];
+            
+            return [runningApp terminate];
+        }
     }
+    
     
     return NO;
-}
-
-- (NSTask *)openTaskWithFile:(NSString *)filepath { // 未使用
-    NSTask *task = [[NSTask alloc] init];
-    [task setLaunchPath:@"/usr/bin/open"];
-    [task setArguments:[NSArray arrayWithObject:filepath]];
-    [task launch];
-    
-    return task;
-}
-
-- (void)closeTask:(NSTask *)task { // 未使用
-//    NSTask *worktask = [[NSTask alloc] init];
-//    [worktask setLaunchPath:@"/bin/kill"];
-//    
-//    NSString *argument = [NSString stringWithFormat:@"-9 %d", task.processIdentifier];
-//    [worktask setArguments:@[argument]];
-//    
-//    [worktask launch];
-    
-    NSBundle *softBundle = [NSBundle bundleWithPath:@"/Applications/Preview.app"];
-    NSString *bundleID = [softBundle bundleIdentifier];
-    NSArray *array = [NSRunningApplication runningApplicationsWithBundleIdentifier:bundleID];
-    if ([array count] > 0) {
-        NSRunningApplication *runningApp = [array objectAtIndex:0];
-        
-        [runningApp terminate];
-    }
 }
 
 #pragma mark - 开机启动项
